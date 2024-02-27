@@ -1,0 +1,90 @@
+.follows {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.follow {
+  display: flex;
+  flex-direction: column;
+}
+
+.follow .stats {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.follows .labels {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.follows button {
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  width: 10rem;
+  border: none;
+  background: hsla(265, 100%, 47%, 1);
+}
+
+.socials-div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  & img{
+    height: 22px;
+  }
+
+}
+
+
+
+.link-div {
+  display: flex;
+}
+
+.link {
+  font-size: 12px;
+  gap: 8px;
+}
+
+.post-btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  gap: 10px;
+  background: #FAFAFA;
+}
+
+.post-btns button {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+#posts {
+  background: #6200EE;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 10px 0px #DBC2FF99;
+}
+
+#my-closet {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #5c5c62;
+  background-color: transparent;
+}
