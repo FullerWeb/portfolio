@@ -1,6 +1,6 @@
 .card-small {
   outline: 3px solid red;
-  width: 11.25rem;
+  max-width: 11.25rem;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -9,12 +9,11 @@
 }
 
 .card-small-img-wrapper {
-  width: 11.25rem;
-  height: 11.25rem;
+  max-width: 11.25rem;
 }
 
 .product-img-small {
-  max-width: 100%;
+  width:100%;
   border-radius: .25rem;
 }
 

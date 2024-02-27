@@ -1,5 +1,5 @@
 .tall-card {
-  width: 11.25rem;
+  max-width: 11.25rem;
   height: auto;
   display: flex;
   flex-direction: column;
