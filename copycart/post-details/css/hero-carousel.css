@@ -1,0 +1,56 @@
+ .carousel-container {
+   overflow: hidden;
+   border-radius: 8px;
+ }
+
+ .carousel {
+   display: flex;
+   height: 350px;
+   transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    /* horizontally center the image */
+    align-items: center;
+    /* vertically center the image */
+  }
+  
+ .carousel-item img {
+   width: 100%;
+   height: 100%;
+  }
+  
+  .carousel-footer {
+   margin-block: 16px;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+
+
+ .progress-dot {
+   display: inline-block;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background-color: hsla(265, 100%, 47%, 0.1);;
+   margin: 0 4px;
+   cursor: pointer;
+ }
+
+ .progress-dot.active {
+  background: hsla(265, 100%, 47%, 1);
+ }
+
+
+ .carousel-icons {
+  position: absolute;
+  right: 0;
+  display: flex;
+  gap: 16px;
+  
+ }
