@@ -1,0 +1,70 @@
+@import url('../global.css');
+@import url('../css/card-tall.css');
+@import url('../css/card-small.css');
+@import url('./css/seller.css');
+@import url('./css/hero-carousel.css');
+@import url('./css/hero.css');
+
+.bottom-price-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-div {
+  display: flex;
+  flex-direction: column;
+  color: hsla(240, 4%, 46%, 1);
+}
+
+.bottom-price {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+}
+
+.bottom-btn {
+  width: 199px;
+  padding: 12px, 54px;
+  border-radius: 4px;
+  background: hsla(265, 100%, 47%, 1);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  border: none;
+}
+
+.hero-prod-desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: hsla(240, 4%, 46%, 1);
+}
+
+.hero-seller-link a {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.see-more {
+  color:hsla(265, 100%, 47%, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+.user-product-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
