@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Fuller D&D</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description"
+    content="Fuller Design and Development offers comprehensive Web Design and Development services alongside expert Content Writing solutions. Elevate your online presence with tailored designs and compelling content.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <nav>
+      <button class="nav-btn">About</button>
+      <button class="nav-btn">Services</button>
+      <button class="nav-btn">Portfolio</button>
+    </nav>
+    <section id="title">
+      <div>
+        <img id="brand-logo" src="/images/fddLogo.webp" alt="">
+      </div>
+      <div>
+        <h1 id="title-name" class="text-warning">Fuller Design & <br>Development</h1>
+      </div>
+    </section>
+    <section id="hero">
+      <img id="hero-img" src="/images/hero-profile-cropped.webp" alt="">
+    </section>
+    <section id="connect">
+      <div><img id="connect-circle-brand" width="32" height="32" src="/images/linkedin-logo-48X48.webp" alt=""></div>
+      <button id="connect-btn">Connect</button>
+      <div><img id="connect-circle-brand" width="32" height="32" src="/images/upwork-circle-48X48.webp" alt=""></div>
+    </section>
+    <section id="plugs">
+      <div class="plug" id="plug1">"Mark consistently went above and beyond in his work, demonstrating
+        a strong
+        work ethic and delivered exceptional results."</div>
+      <div class="plug" id="plug2">"Marks's dedication is unparalleled; he tackles
+        challenges
+        head-on and consistently produces high-quality work, earning our team's respect and admiration."
+      </div>
+      <div class="plug" id="plug3">"Mark's commitment to excellence is evident in everything he
+        does. His
+        attention to detail and tireless work ethic made him an invaluable asset to our team."</div>
+      <div class="plug" id="plug4">"Mark is a talented writer. He was able to produce a quality piece of writing
+        with a quick turnaround. He also responded to our messages quickly.</div>
+      <div class="plug" id="plug5">"Mark is a fast and diligent worker. Very good freelancer and greatly recommended!"
+      </div>
+    </section>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+
+  <script>
+    const testimonials = document.querySelectorAll('.plug');
+    let currentTestimonialIndex = 0;
+
+    function showNextTestimonial() {
+      testimonials.forEach(testimonial => {
+        testimonial.classList.remove('visible');
+      });
+      testimonials[currentTestimonialIndex].classList.add('visible');
+      currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+    }
+
+    showNextTestimonial(); // Show the first testimonial immediately
+
+    setInterval(showNextTestimonial, 10000); // Change testimonial every 6 seconds
+  </script>
+</body>
+
+</html>
