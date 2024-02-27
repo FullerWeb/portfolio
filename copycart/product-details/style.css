@@ -1,0 +1,39 @@
+@import url('../global.css');
+@import url('./css/seller.css');
+@import url('../css/hero-carousel.css');
+@import url('./css/hero.css');
+
+
+
+
+.bottom-price-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-div {
+  display: flex;
+  flex-direction: column;
+  color: var(--light-gray);
+}
+
+.bottom-price {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color);
+}
+
+.bottom-buy-btn {
+  width: 14rem;
+  padding-inline: 4rem;
+  padding-block: 1rem;
+  border: none;
+  font-weight: var(--fw-700);
+  font-size: var(--fs7);
+  background: var(--purple);
+  color: var(--white);
+  padding: .5rem;
+  border-radius: .25rem;
+
+}
