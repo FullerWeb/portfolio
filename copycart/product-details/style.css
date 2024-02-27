@@ -1,7 +1,9 @@
 @import url('../global.css');
 @import url('../css/hero-carousel.css');
-@import url('/css/seller.css');
-@import url('/css/hero.css');
+@import url('../css/card-small.css');
+@import url('../css/card-tall.css');
+@import url('./css/seller.css');
+@import url('./css/hero.css');
 
 .bottom-price-btn {
   display: flex;
