@@ -1,0 +1,46 @@
+.tall-card {
+  width: 11.25rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: .5rem;
+}
+
+.tall-card-img-wrapper {
+  width: 11.25rem;
+  height: 16rem;
+}
+
+.product-img-tall {
+  object-fit: cover;
+  border-radius: .25rem;
+}
+
+.seller-info {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.seller-social {
+  display: flex;
+  gap: .25rem;
+}
+
+.seller-social-uname {
+  font-size: 12px;
+  font-weight: var(--fw-400);
+}
+
+.likes-block {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+}
+
+.likes-qty {
+  color: var(--light-grey);
+  font-weight:var(--fw-400);
+  font-size: var(--fs3);
+}
