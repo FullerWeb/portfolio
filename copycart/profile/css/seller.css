@@ -1,6 +1,7 @@
 .seller-profile {
+  padding-top: 2rem;
   display: flex;
-  gap: 8px;
+  gap: .5rem;
 }
 
 .seller-info {
