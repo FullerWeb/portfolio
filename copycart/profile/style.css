@@ -41,10 +41,9 @@
 
 }
 
-
-
 .link-div {
   display: flex;
+  gap: .25rem;
 }
 
 .link {
