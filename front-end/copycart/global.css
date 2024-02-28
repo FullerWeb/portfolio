@@ -85,10 +85,13 @@ a:hover {
 }
 
 nav {
-  position: fixed;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
+  max-width: 374px;
   background-color: white;
-  top: 0;
   z-index: 10;
 }
 
