@@ -18,7 +18,7 @@
   justify-content: space-between;
   & .user {
     display: flex;
-    gap: 1.25rem;
+    gap: .25rem;
     & img {
       border-radius: 50%;
     }
