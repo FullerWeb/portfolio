@@ -1,1 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      /* outline: 1px solid; */
+      --warning: #ffc107;
+      font-family: sans-serif;
+    }
+
+    img {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    body {
+      min-width: 280px;
+      background-color: #0f0f19;
+      color: whitesmoke;
+      max-width: 75ch;
+      margin: .5rem auto;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+    }
+
+    .card {
+      position: relative;
+      border: 1px solid rgb(84, 84, 84);
+      border-radius: .25rem;
+      width: 280px;
+      height: 240px;
+      padding: 1rem;
+      color: whitesmoke;
+      background-color: transparent;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      padding: .5rem;
+      border-bottom: 1px solid rgb(84, 84, 84);
+    }
+
+    .card-title {
+      color: var(--warning)
+    }
+
+    .card-view-link {
+      border: 1px solid var(--warning);
+      color: whitesmoke;
+      text-decoration: none;
+      padding-inline: .25rem;
+      padding-block: .15rem;
+      border-radius: .25rem;
+    }
+
+    .card-view-link:hover,
+    .card:focus {
+      box-shadow: 0px 0px 19px -3px var(--warning);
+    }
+
+    .card-body {
+      display: flex;
+      gap: 1rem;
+      padding: .75rem;
+    }
+
+    .card-sidebar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    
+      padding-inline: .25rem;
+      
+    }
+
+    .logo {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1.75rem;
+      padding: .25rem;
+    }
+
+
+    .card-project-brand-logo {
+      align-self: start;
+      height: 4rem;
+      width: 4rem;
+    }
+
+    .card-h1 {
+      border-bottom: 1px solid rgb(82, 82, 82);
+      font-size: 1rem;
+      margin-bottom: 0;
+
+    }
+
+    .card-h3 {
+      font-size: .75rem;
+      margin-bottom: 0;
+    }
+
+    .card-text {
+      font-size: .75rem;
+    }
+
+    .project-desc {
+      padding-block: 1rem;
+      text-wrap: balance;
+      font-size: .75rem;
+    }
+
+    .stack {
+      padding-top: 1.25rem;
+      display: flex;
+      gap: .125rem;
+      height: 2rem;
+    }
+
+    .stack-logo {
+      height: 2rem;
+    }
+
+    /*Brand styling*/
+    #holy-feast-brand {
+      align-self: start;
+      width: 3rem;
+      height: auto;
+      aspect-ratio: 3/4;
+    }
+  </style>
+  <title>Fuller D&D | Portfolio</title>
+</head>
+
+<body>
+
+  <body class="modal-body">
+
+    <h1 class="modal-h1">Portfolio</h1>
+    <h2>Web Development</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Customer Survey</span>
+          <div class="">
+            <a class="card-view-link" href="/front-end/holy-feast/index.html">View</a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-sidebar">
+            <img id="holy-feast-brand" src="/assets/client-brands/holy-feast.webp" alt="Holy Feast Logo">
+          </div>
+          <div class="card-content">
+            <h1 class="card-h1">Holy Feast</h1>
+            <spam class="project-desc">Created multipart form to capture customers' current dining experience.</span>
+            <div class="stack">
+              <div>
+                <img src="/assets/stack-brands/html-css-js.webp" class="stack-logo" alt="">
+              </div>
+              <div>
+                <img src="/assets/stack-brands/sheets-logo.webp" class="stack-logo" alt="">
+              </div>
+              <div>
+                <img src="/assets/stack-brands/GAnalytics-48X48.webp" width=32 height="32" alt="" class="stack-logo">
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="/assets/fddLogo-24X24.webp" class="logo" alt="" />
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Figma Conversion</span>
+          <div class="">
+            <a class="card-view-link" href="/front-end/holy-feast/index.html">View</a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-sidebar">
+            <img id="holy-feast-brand" src="/assets/client-brands/holy-feast.webp" alt="Holy Feast Logo">
+          </div>
+          <div class="card-content">
+            <h1 class="card-h1">COPYCART</h1>
+            <span class="project-desc">Converted Figma Design to mobile UI.</span>
+            <div class="stack">
+              <div>
+                <img src="/assets/stack-brands/html-css-js.webp" class="stack-logo" alt="">
+              </div>
+              <div>
+                <img src="/assets/stack-brands/figma-logo-512.webp" class="stack-logo" alt="">
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <img src="/assets/fddLogo-24X24.webp" class="logo" alt="" />
+      </div>
+
+    </div>
+  </body>
+
+</html>
