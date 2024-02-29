@@ -11,7 +11,7 @@
     .modal {
       display: none;
       margin: 0 auto;
-      z-index: 1;
+      z-index: -1;
       padding-inline: 1rem;
       padding-top: 16rem;
       padding-bottom: 11rem;
