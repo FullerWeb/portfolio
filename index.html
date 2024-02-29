@@ -1,44 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+<meta name="description"
+  content="Fuller Design and Development offers comprehensive Web Design and Development services alongside expert Content Writing solutions. Elevate your online presence with tailored designs and compelling content.">
+  <link rel="stylesheet" href="/css/style.css">
   <title>Fuller D&D</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <meta name="description"
-    content="Fuller Design and Development offers comprehensive Web Design and Development services alongside expert Content Writing solutions. Elevate your online presence with tailored designs and compelling content.">
-    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
+
+  <!-- Buttons to open the modals -->
   <header>
-    <!-- place navbar here -->
-  </header>
-  <main>
-    <nav>
-      <button class="nav-btn">About</button>
-      <button class="nav-btn">Services</button>
-      <button class="nav-btn">Portfolio</button>
+    <div id="brand">
+      <a href="/" style="display: flex;text-decoration: none;">
+        <img id="brand-logo" src="/assets/fddLogo.webp" alt="brand">
+
+        <div>
+          <h1 id="brand-name" class="text-warning">Fuller Design & <br>Development</h1>
+        </div>
+      </a>
+    </div>
+    <nav class="btn-container">
+      <button class="openModalBtn" data-url="/about/">About</button>
+      <button class="openModalBtn" data-url="/services/">Services</button>
+      <button class="openModalBtn" data-url="/portfolio/">Portfolio</button>
     </nav>
-    <section id="title">
-      <div>
-        <img id="brand-logo" src="/assets/fddLogo.webp" alt="">
+  </header>
+  <div id="app-wrapper">
+    <!-- The modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div id="modalContent"></div>
       </div>
-      <div>
-        <h1 id="title-name" class="text-warning">Fuller Design & <br>Development</h1>
-      </div>
-    </section>
-    <section id="hero">
-      <img id="hero-img" src="/assets/hero-profile-cropped.webp" alt="">
-    </section>
-    <section id="connect">
+    </div>
+  </div>
+  <footer>
+    <div id="connect">
       <div><img id="connect-circle-brand" width="32" height="32" src="/assets/linkedin-logo-48X48.webp" alt=""></div>
-      <button id="connect-btn">Connect</button>
       <div><img id="connect-circle-brand" width="32" height="32" src="/assets/upwork-circle-48X48.webp" alt=""></div>
-    </section>
-    <section id="plugs">
+    </div>
+    <div id="plugs">
       <div class="plug" id="plug1">"Mark consistently went above and beyond in his work, demonstrating
         a strong
         work ethic and delivered exceptional results."</div>
@@ -50,32 +57,54 @@
         does. His
         attention to detail and tireless work ethic made him an invaluable asset to our team."</div>
       <div class="plug" id="plug4">"Mark is a talented writer. He was able to produce a quality piece of writing
-        with a quick turnaround. He also responded to our messages quickly.</div>
+        with a quick turnaround. He also responded to our messages quickly."<br>- Soft Batch Standard</div>
       <div class="plug" id="plug5">"Mark is a fast and diligent worker. Very good freelancer and greatly recommended!"
       </div>
-    </section>
+      <div class="plug" id="plug6">
+        "Mark's performance far exceeded our expectations, and his exemplary work exudes professionalism."<br>
+        - Dean Seneca, CEO of Seneca Scientific Solutions+, LLC
+      </div>
     </div>
-  </main>
-  <footer>
-    <!-- place footer here -->
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Open the home modal on initial load
+      openModal("/home/");
+
+      // Your existing event listeners and code can go here
+      var openModalBtn = document.getElementById("openModalBtn");
+      if (openModalBtn) {
+        openModalBtn.addEventListener("click", function () {
+          // Code to open the modal
+        });
+      }
+    });
+
+  </script>
+
 
   <script>
-    const testimonials = document.querySelectorAll('.plug');
-    let currentTestimonialIndex = 0;
-
-    function showNextTestimonial() {
-      testimonials.forEach(testimonial => {
-        testimonial.classList.remove('visible');
-      });
-      testimonials[currentTestimonialIndex].classList.add('visible');
-      currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+    // Function to dynamically load CSS file
+    function loadCSS(url) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = url;
+      document.head.appendChild(link);
     }
 
-    showNextTestimonial(); // Show the first testimonial immediately
+    document.addEventListener("DOMContentLoaded", function () {
+      // Your JavaScript code that interacts with the DOM goes here
+      var openModalBtn = document.getElementById("openModalBtn");
+      if (openModalBtn) {
+        openModalBtn.addEventListener("click", function () {
+          // Code to open the modal
+        });
+      }
+    });
 
-    setInterval(showNextTestimonial, 10000); // Change testimonial every 6 seconds
   </script>
+  <script src="js/modal.js"></script>
+  <script src="js/plugs.js"></script>
 </body>
 
 </html>
