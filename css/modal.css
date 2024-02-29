@@ -1,18 +1,21 @@
-    .modal-body {
-      width: 100%;
-      position: relative;
-      padding: 1rem;
-      overflow: visible;
-    }
-    .modal-h1 {
-      color: var(--warning);
-    }
-    /* Styles for the modal */
-    .modal {
-      display: none;
-      margin: 0 auto;
-      z-index: -1;
-      padding-inline: 1rem;
-      padding-top: 16rem;
-      padding-bottom: 11rem;
-    }
+.modal-h1 {
+  color: var(--warning);
+}
+
+/* Styles for the modal */
+.modal {
+  display: none;
+  margin: 0 auto;
+  padding-inline: 1rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 6rem;
+  padding-bottom: 9rem;
+}
+
+.modal-body {
+  width: 100%;
+  padding: 1rem;
+  overflow: scroll;
+  z-index: -1;
+}
