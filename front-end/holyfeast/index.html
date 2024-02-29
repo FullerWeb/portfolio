@@ -1,1 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <!-- Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HHSVRKM70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5HHSVRKM70');
+</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <style>
+    html {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    body {
+      max-width: 500px;
+      min-width: 280px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    img {
+      width: 30%;
+    }
+  </style>
+
+</head>
+  <!-- Google tag (gtag.js) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-5HHSVRKM70"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5HHSVRKM70');
+</script> -->
+<header class="bg-black p-2 m-0 mb-2 text-center text-warning border-bottom border-danger">
+  <div><img style="border-radius: 50%;" src=
+    "tummy-transparent.png" alt="" srcset=""></div>
+  <h1 class="">Holy Feast</h1>
+  <h2>Customer Experience Survey</h2>
+</header>
+
+<body class="bg-black text-warning" aria-hidden="true"></i>
+
+  <form id="form" class="p-2" method="POST">
+    <!-- Start Page 1 -->
+    <div id="page1">
+      <div class="text-light">
+        <p>
+          Welcome to the Holy Feast Customer Experience Survey! Your input is invaluable in helping us refine and
+          elevate the ordering experience for Holy Feast, the food truck company dedicated to serving customers like
+          you.
+        </p>
+        <p>
+          This survey aims to gather insights into your preferences and challenges when ordering food, with the ultimate goal of enhancing our services to better cater to your needs. By participating in this survey, you're actively shaping the future of Holy Feast's customer experience.
+        </p>
+        <p>
+          To express our gratitude for your participation, we're thrilled to offer you the opportunity to enter into a drawing for a $15 gift certificate to use towards future purchases at Holy Feast upon fully completing the survey. Simply provide your name and email address at the end of the survey, and you'll be automatically entered for a chance to win!
+        </p>
+        <p>
+          Thank you for taking the time to share your thoughts and for being a valued part of the Holy Feast community.
+        </p>
+      </div>
+
+      <!-- Add other form fields for page 1 here -->
+
+
+      <div class="mb-2 d-flex justify-content-end">
+        <button class="button bg-transparent border-warning text-warning" type="button" id="next1">Next</button>
+      </div>
+    </div>
+    <!-- Start Page 2 -->
+    <div id="page2" style="display: none;">
+      <h3 class="mb-0">Personal Information</h3>
+      <small><em>Optional</em></small>
+      <div class="mt-3">
+        <label class="text-warning">Name</label>
+        <div class="control">
+          <input class="input" type="text" name="Name" />
+        </div>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div class="field">
+          <label class="">Age</label>
+          <div class="control">
+            <input class="input w-50" type="number" name="Age" />
+          </div>
+        </div>
+        <div class="field">
+          <label class="">Gender</label>
+          <div class="control">
+            <input class="input" type="text" name="Gender" />
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Add other form fields for page 2 here -->
+
+      <div class="field is-grouped mb-2 d-flex justify-content-between">
+        <button class="button bg-transparent border-warning text-warning" type="button" id="prev2">Previous</button>
+        <button class="button bg-transparent border-warning text-warning" type="button" id="next2">Next</button>
+      </div>
+    </div>
+    <!-- Start Page 3 -->
+    <div id="page3" style="display: none;">
+      <div>
+        <h3>Ordering Experience</h3>
+        <p>
+          How much money do you typically spend on takeout per week? (Please select the range that fits your budget)
+        </p>
+        <div class="d-flex flex-column gap-1 text-light mb-5">
+          <label>
+            <input type="radio" name="Weekly Spend" value="15Less">
+            Less than $15
+          </label>
+          <label>
+            <input type="radio" name="Weekly Spend" value="15-25">
+            $15-$25
+          </label>
+          <label>
+            <input type="radio" name="Weekly Spend" value="25-35">
+            $25-$35
+          </label>
+          <label>
+            <input type="radio" name="Weekly Spend" value="35+">
+            More than $35
+          </label>
+        </div>
+      </div>
+
+
+      <!-- Add other form fields for page 3 here -->
+
+      <div class="field is-grouped mb-2 d-flex justify-content-between">
+        <button class="button bg-transparent border-warning text-warning" type="button" id="prev3">Previous</button>
+        <button class="button bg-transparent border-warning text-warning" type="button" id="next3">Next</button>
+      </div>
+    </div>
+    <!-- Start Page 4 -->
+    <div id="page4" style="display: none;">
+      <div>
+        <h3>Ordering Experience</h3>
+        <p>
+          How do you typically place your orders from Holy Feast?
+        </p>
+        <div class="d-flex flex-column gap-1 text-light mb-5">
+          <label>
+            <input type="radio" name="Place Orders" value="Third-party">
+            Third Party Delivery Apps (Doordash, Grubhub, Uber Eats, etc.)
+          </label>
+          <label>
+            <input type="radio" name="Place Orders" value="In-Person">
+            In-Person
+          </label>
+          <label>
+            <input type="radio" name="Place Orders" value="Phone">
+            Phone
+          </label>
+          <label>
+            <input class="rounded" type="radio" name="Place Orders" value="Other">
+            Other-Please Specify
+          </label>
+          <label>
+            <input class="rounded" type="text" name="Place Orders Other">
+          </label>
+        </div>
+      </div>
+
+
+      <!-- Add other form fields for page 3 here -->
+
+      <div class="mb-2 d-flex justify-content-between">
+        <button class="button bg-transparent border-warning text-warning" type="button" id="prev4">Previous</button>
+        <button class="button bg-transparent border-warning text-warning" type="button" id="next4">Next</button>
+      </div>
+    </div>
+    <!-- Start Page 5 -->
+    <div id="page5" style="display: none;">
+      <div>
+        <h3>Ordering Experience</h3>
+        <p>
+          What factors influence your decision to order from Holy Feast?
+        </p>
+        <div class="d-flex flex-column gap-1 text-light mb-5">
+          <label>
+            <input type="radio" name="Dining Factors" value="Menu variety">
+            Menu variety
+          </label>
+          <label>
+            <input type="radio" name="Dining Factors" value="Price">
+            Price
+          </label>
+          <label>
+            <input type="radio" name="Dining Factors" value="Convenience">
+            Convenience
+          </label>
+          <label>
+            <input type="radio" name="Dining Factors" value="positive experiences">
+            Previous positive experiences
+          </label>
+          <label>
+            <input  type="radio" name="Dining Factors" value="Other">
+            Other-Please Specify
+          </label>
+          <label>
+            <input class="rounded" type="text" name="Place Orders Other">
+          </label>
+        </div>
+      </div>
+
+      <div class="field is-grouped mb-2 d-flex justify-content-between">
+        <button class="button bg-transparent border-warning text-warning" type="button" id="prev5">Previous</button>
+        <button class="button bg-transparent border-warning text-warning" type="button" id="next5">Next</button>
+      </div>
+    </div>
+    <!-- Start Page 6 -->
+    <div id="page6" style="display: none;">
+      <div>
+        <h3>Ordering Experience</h3>
+        <p>
+          What aspects of ordering food from Holy Feast through third-party apps, if any, do you find could be improved
+          or present
+          obstacles?
+        </p>
+        <div class="d-flex flex-column gap-1 text-light mb-5">
+          <label>
+            <input type="radio" name="Third Party Ordering" value="High Delivery Fees">
+            Higher-than-preferred delivery fees
+          </label>
+          <label>
+            <input type="radio" name="Third Party Ordering" value="Restricted Customization">
+            Restricted options for customizing orders
+          </label>
+          <label>
+            <input type="radio" name="Third Party Ordering" value="Delivery Wait">
+            Extended wait times for deliveries
+          </label>
+          <label>
+            <input type="radio" name="Third Party Ordering" value="Tracking Orders">
+            Challenges in tracking the progress of orders
+          </label>
+          <label>
+            <input  type="radio" name="Third Party Ordering" value="Other">
+            Other-Please Specify
+          </label>
+          <label>
+            <span></span>
+            <input class="rounded" type="text" name="Place Orders Other">
+          </label>
+        </div>
+      </div>
+
+      <div class="mb-2 d-flex justify-content-between">
+        <button class="button bg-transparent border-warning text-warning" type="button" id="prev6">Previous</button>
+        <button class="button bg-transparent border-warning text-warning" type="button" id="next6">Next</button>
+      </div>
+    </div>
+    <!-- Start Page 7 -->
+    <div id="page7" style="display: none;">
+      <div>
+        <h3>General Feedback</h3>
+        <div class="d-flex flex-column gap-1 text-warning mb-5">
+          <p>
+            What improvements would you suggest to enhance the overall ordering experience with Holy Feast?
+          </p>
+          <textarea name="General Feedback" id="feeedback" cols="30" rows="5"
+            style="resize: none; border-radius: .5rem; padding:.25rem"></textarea>
+        </div>
+        <div class="d-flex flex-column gap-1 text-warning mb-5">
+          <p>
+            Please feel free to leave any additional comments.
+          </p>
+          <textarea name="Additional Comments" id="comments" cols="30" rows="5"
+            style="resize: none; border-radius: .5rem; padding:.25rem"></textarea>
+        </div>
+      </div>
+
+      <div class="mb-2 d-flex justify-content-between">
+        <button class="button bg-transparent border-warning text-warning" type="button" id="prev7">Previous</button>
+        <button class="button bg-transparent border-warning text-warning" type="button" id="next7">Next</button>
+      </div>
+    </div>
+    <!-- Start Page 8 -->
+    <div id="page8" style="display: none;">
+      <div>
+        <h3>General Feedback</h3>
+        <div class="d-flex flex-column gap-1 mb-5">
+          <p class="text-light">
+            Thank you once again for taking the time to participate in the Holy Feast Customer Experience Survey. Your feedback is incredibly valuable to us as we strive to improve our services to better meet your needs. As a token of our appreciation for your participation, we're excited to offer you the chance to win a $15 Holy Feast gift certificate! 
+          </p>
+          <p class="text-light">
+            To be entered into the drawing, please provide your name and email address below. Your information will be kept confidential and used solely for the purpose of contacting the winner of the drawing.
+          </p>
+            <div class="d-flex flex-column">
+              <label for="end-name">
+                Name
+                </label>
+                <input class="w-50 rounded" type="text" id="end-name" name="End Name">
+              <label for="end-email">
+                Email
+                </label>
+                <input class="w-50 rounded" type="email" id="end-email" name="End Email">
+            </div>
+        </div>
+      </div>
+
+      <div class="mb-2 d-flex justify-content-between">
+        <button class="button bg-transparent border-warning text-warning" type="button" id="prev8">Previous</button>
+        <button class="button bg-transparent border-warning text-warning" type="submit"
+          id="submit-button">Submit</button>
+      </div>
+    </div>
+  </form>
+
+  <div id="message"
+    style="display: none; margin: 20px; font-weight: bold; color: green; padding: 8px; background-color: beige; border-radius: 4px; border-color: aquamarine;">
+  </div>
+
+  <script>
+    var currentPage = 1;
+    function showPage(page) {
+      for (var i = 1; i <= 10; i++) { // Assuming you have maximum of 5 pages
+        var pageElement = document.getElementById('page' + i);
+        if (pageElement) {
+          if (i === page) {
+            pageElement.style.display = 'block';
+          } else {
+            pageElement.style.display = 'none';
+          }
+        }
+      }
+      currentPage = page;
+    }
+    // Page 1 Buttons
+    document.getElementById('next1').addEventListener('click', function () {
+      showPage(2);
+    });
+    // Page 2 Buttons
+    document.getElementById('prev2').addEventListener('click', function () {
+      showPage(1);
+    });
+
+    document.getElementById('next2').addEventListener('click', function () {
+      showPage(3);
+    });
+    // Page 3 Buttons
+    document.getElementById('prev3').addEventListener('click', function () {
+      showPage(2);
+    });
+
+    document.getElementById('next3').addEventListener('click', function () {
+      showPage(4);
+    });
+    // Page 4 Buttons
+    document.getElementById('prev4').addEventListener('click', function () {
+      showPage(3);
+    });
+    // Page 4 Buttons
+    document.getElementById('next4').addEventListener('click', function () {
+      showPage(5);
+    });
+    // Page 5 Buttons
+    document.getElementById('prev5').addEventListener('click', function () {
+      showPage(4);
+    });
+    document.getElementById('next5').addEventListener('click', function () {
+      showPage(6);
+    });
+    // Page 6 Buttons
+    document.getElementById('prev6').addEventListener('click', function () {
+      showPage(5);
+    });
+    document.getElementById('next6').addEventListener('click', function () {
+      showPage(7);
+    });
+    // Page 7 Buttons
+    document.getElementById('prev7').addEventListener('click', function () {
+      showPage(6);
+    });
+    document.getElementById('next7').addEventListener('click', function () {
+      showPage(8);
+    });
+    // Page 8 Buttons
+    document.getElementById('prev8').addEventListener('click', function () {
+      showPage(7);
+    });
+
+    // Show the first page initially
+    showPage(1);
+  </script>
+      <script>
+        document.getElementById("form").addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent the default form submission
+          document.getElementById("message").textContent = "Submitting..";
+          document.getElementById("message").style.display = "block";
+          document.getElementById("submit-button").disabled = true;
+
+          // Collect the form data
+          var formData = new FormData(this);
+          var keyValuePairs = [];
+          for (var pair of formData.entries()) {
+            keyValuePairs.push(pair[0] + "=" + pair[1]);
+          }
+
+          var formDataString = keyValuePairs.join("&");
+
+          // Send a POST request to your Google Apps Script
+          fetch(
+            "https://script.google.com/macros/s/AKfycbw-M61FOOzDZtdnD_dAWsBacDpfYfhX9N92EUc0CH_oMUylZr63zLaa57Q9l2fazB7IMA/exec",
+            {
+              redirect: "follow",
+              method: "POST",
+              body: formDataString,
+              headers: {
+                "Content-Type": "text/plain;charset=utf-8",
+              },
+            }
+          )
+            .then(function (response) {
+              // Check if the request was successful
+              if (response) {
+                return response; // Assuming your script returns JSON response
+              } else {
+                throw new Error("Failed to submit the form.");
+              }
+            })
+            .then(function (data) {
+              // Display a success message
+              document.getElementById("message").textContent =
+                "Responses submitted successfully! You can now close this page";
+              document.getElementById("message").style.display = "block";
+              document.getElementById("message").style.backgroundColor = "green";
+              document.getElementById("message").style.color = "beige";
+              document.getElementById("submit-button").disabled = false;
+              document.getElementById("form").reset();
+
+/*               setTimeout(function () {
+                document.getElementById("message").textContent = "";
+                document.getElementById("message").style.display = "none";
+              }, 2600); */
+            })
+            .catch(function (error) {
+              // Handle errors, you can display an error message here
+              console.error(error);
+              document.getElementById("message").textContent =
+                "An error occurred while submitting the form.";
+              document.getElementById("message").style.display = "block";
+            });
+        });
+      </script>
+  
+</body>
+
+</html>
