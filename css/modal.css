@@ -1,0 +1,18 @@
+    .modal-body {
+      width: 100%;
+      position: relative;
+      padding: 1rem;
+      overflow: visible;
+    }
+    .modal-h1 {
+      color: var(--warning);
+    }
+    /* Styles for the modal */
+    .modal {
+      display: none;
+      margin: 0 auto;
+      z-index: 1;
+      padding-inline: 1rem;
+      padding-top: 16rem;
+      padding-bottom: 11rem;
+    }
