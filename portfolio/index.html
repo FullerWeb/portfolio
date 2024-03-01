@@ -4,25 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    <meta name="description"
+      content="Fuller Design and Development offers comprehensive Web Design and Development services alongside expert Content Writing solutions. Elevate your online presence with tailored designs and compelling content.">
+  <link rel="stylesheet" href="/css/style.css">
   <style>
     * {
       /* outline: 1px solid; */
       --warning: #ffc107;
-      font-family: sans-serif;
-    }
-
-    img {
-      display: block;
-      box-sizing: border-box;
-      width: 100%;
-    }
-
-    body {
-      min-width: 280px;
-      background-color: #0f0f19;
-      color: whitesmoke;
-      max-width: 75ch;
-      margin: .5rem auto;
     }
 
     .cards {
@@ -86,9 +75,9 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-    
+
       padding-inline: .25rem;
-      
+
     }
 
     .logo {
@@ -153,19 +142,26 @@
       height: 2rem;
       width: auto;
       border-radius: .25rem;
-      
+
     }
-
-
   </style>
   <title>Fuller D&D | Portfolio</title>
 </head>
 
 <body>
-
-  <body class="modal-body">
-
-    <h1 class="modal-h1">Portfolio</h1>
+  <header id="header" style="
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: .75px 1rem;
+    background-color: black;
+    ">
+  </header>
+  <div class="body-content">
+    <h1 class="text-warning">Portfolio</h1>
     <h2>Web Development</h2>
     <div class="cards">
       <div class="card">
@@ -182,17 +178,17 @@
           <div class="card-content">
             <h1 class="card-h1">Holy Feast</h1>
             <spam class="project-desc">Created multipart form to capture customers' current dining experience.</span>
-            <div class="stack">
-              <div>
-                <img src="/assets/stack-icons/html-css-js.webp" class="stack-logo" alt="">
+              <div class="stack">
+                <div>
+                  <img src="/assets/stack-icons/html-css-js.webp" class="stack-logo" alt="">
+                </div>
+                <div>
+                  <img src="/assets/stack-icons/sheets-logo.webp" class="stack-logo" alt="">
+                </div>
+                <div>
+                  <img src="/assets/stack-icons/GAnalytics-48X48.webp" width=32 height="32" alt="" class="stack-logo">
+                </div>
               </div>
-              <div>
-                <img src="/assets/stack-icons/sheets-logo.webp" class="stack-logo" alt="">
-              </div>
-              <div>
-                <img src="/assets/stack-icons/GAnalytics-48X48.webp" width=32 height="32" alt="" class="stack-logo">
-              </div>
-            </div>
           </div>
         </div>
         <img src="/assets/fddLogo-24X24.webp" class="logo" alt="" />
@@ -206,7 +202,8 @@
         </div>
         <div class="card-body">
           <div class="card-sidebar">
-            <img id="copycart-brand" src="/assets/client-brands/copycart.webp" alt="Holy Feast Logo" width="122" height="20">
+            <img id="copycart-brand" src="/assets/client-brands/copycart.webp" alt="Holy Feast Logo" width="122"
+              height="20">
           </div>
           <div class="card-content">
             <h1 class="card-h1">COPYCART</h1>
@@ -218,7 +215,6 @@
               <div>
                 <img src="/assets/stack-icons/figma-logo-512.webp" class="stack-logo" alt="">
               </div>
-
             </div>
           </div>
         </div>
@@ -226,6 +222,10 @@
       </div>
 
     </div>
-  </body>
+  </div>
+    <footer id="footer" style="display: flex; flex-direction: column; height: 10rem; position: fixed; bottom: 0;"></footer>
+    <script src="/Components/header/header.js"></script>
+    <script src="/Components/footer/footer.js"></script>
+</body>
 
 </html>
