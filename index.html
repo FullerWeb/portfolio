@@ -9,6 +9,15 @@
   <meta name="description"
     content="Fuller Design and Development offers comprehensive Web Design and Development services alongside expert Content Writing solutions. Elevate your online presence with tailored designs and compelling content.">
   <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+    #hero-img {
+      max-width: 480px;
+      height: auto;
+      aspect-ratio: 1.12/1;
+    }
+  </style>
+
   <title>Fuller D&D | Home</title>
 </head>
 
@@ -24,12 +33,14 @@
     background-color: black;
     ">
   </header>
-  <div class="main" style="overflow: hidden;">
+  <div class="body-content"
+    style="overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100%;">
     <img id="hero-img" src="/assets/hero-profile-cropped.webp">
   </div>
-    <footer id="footer" style="display: flex; flex-direction: column; height: 10rem; position: fixed; bottom: 0;"></footer>
-    <script src="/Components/header/header.js"></script>
-    <script src="/Components/footer/footer.js"></script>
+  <footer id="footer" style="display: flex; flex-direction: column; height: 10rem; position: fixed; bottom: 0;">
+  </footer>
+  <script src="/Components/header/header.js"></script>
+  <script src="/Components/footer/footer.js"></script>
 </body>
 
 </html>
