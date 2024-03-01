@@ -1,8 +1,4 @@
-    @import url(modal.css);
-
     :root {
-      --body-padding: 2rem;
-      --max-width: 75ch;
 
       --white: whitesmoke;
       --warning: #ffc107;
@@ -15,91 +11,48 @@
       box-sizing: border-box;
     }
 
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: var(--background);
-      color: var(--white);
-      font-family: sans-serif;
-      height: 100dvh;
+    /***** Utility Classes *****/
+
+    .text-warning {
+      color: var(--warning);
     }
 
-    body {
-      max-width: var(--width);
-      margin: 0 auto;
+    .body-content {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-          overflow: scroll;
+      padding: 2rem;
+      padding-top: 4rem;
+      padding-bottom: 11.5rem;
     }
 
-    body,
-    footer,
-    header {
-      max-width: var(--max-width);
+    .flex-container {
+      display: flex;
     }
 
+    .main {
+      padding-top: 5rem;
+    }
+
+    /***** End Utility Classes *****/
+
+    html,
+    body {
+      color: var(--white);
+      height: 100%;
+    }
 
     header,
     footer {
-      margin: 0 auto;
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      background-color: black;
       width: 100%;
-      background: var(--background);
     }
 
-    header {
-      top: 0;
-
-      nav {
-        padding-block-end: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-      }
-    }
-
-    header {
-      gap: 1rem;
-      z-index: 1;
-    }
-
-
-    footer {
-      bottom: 0;
-      gap: 1rem;
-      padding-block: 1rem;
-      flex-direction: column;
-      height: 9rem;
-      background: var(--background);
-
-      & #plugs {
-        background-color: var(--background-color);
-        bottom: 0;
-        text-align: center;
-      }
-    }
-
-    .plug {
-      max-width: calc(var(--max-width) - 8rem);
-      height: 5rem;
-      display: none;
-      font-style: italic;
-      text-wrap: balance;
-    }
-
-    nav button {
-      cursor: pointer;
-      border: 2px solid var(--white);
-      background-color: transparent;
-      color: var(--white);
-      border-radius: .25rem;
+    body {
+      background-color: var(--background);
+      max-width: 960;
+      margin: 0 auto;
     }
 
     nav a {
@@ -110,8 +63,7 @@
       border-radius: .25rem;
     }
 
-    nav a:hover,
-    nav button:hover {
+    nav a:hover {
       color: var(--hover);
     }
 
@@ -122,48 +74,4 @@
 
     img {
       display: block;
-    }
-
-
-    #brand {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      & #brand-logo {
-        height: auto;
-        width: 3.3rem;
-        aspect-ratio: 1/1;
-        padding: .5rem;
-      }
-
-      & #brand-name {
-        font-size: 1rem;
-        line-height: 1rem;
-        color: var(--warning);
-      }
-    }
-
-    .visible {
-      display: block;
-      animation: testimonialAnimation 10s infinite;
-    }
-
-    @keyframes testimonialAnimation {
-
-      0%,
-      100% {
-        opacity: 0;
-      }
-
-      10%,
-      90% {
-        opacity: 1;
-      }
-    }
-
-    #connect {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
     }
