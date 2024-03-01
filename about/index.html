@@ -4,68 +4,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <meta name="description"
+    content="Fuller Design and Development offers comprehensive Web Design and Development services alongside expert Content Writing solutions. Elevate your online presence with tailored designs and compelling content.">
   <link rel="stylesheet" href="/css/style.css">
   <title>Fuller D&D | About</title>
 
   <style>
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .text-block {
+      max-width: 50ch;
+    }
+
     #younger {
-      float: left;
-      margin-right: 1.25rem;
-      margin-bottom: 1.25rem;
+      width: 240px;
+      max-width: 340px;
+      height: auto;
+      aspect-ratio: 1/1;
     }
 
     #thinker {
-      float: right;
-      margin-block: 1.5rem;
-
-      &img {
-        border-radius: 50%;
-      }
+      width: 250px;
+      max-width: 340px;
+      height: auto;
+      aspect-ratio: 5/4;
     }
   </style>
 
 </head>
 
-<body class="modal-body">
-  <div class="" id="background">
-    <div>
-      <h1 class="modal-h1">About</h1>
-      <img id="younger" src="/assets/younger.webp" width="160" height="256"
-        alt="Younger picture of Mark Fuller">
-      <p>
-        Mark Fuller, the driving force behind Fuller Design and Development, is transitioning from a 15-year
-        career
-        as a
-        data network engineer into web developing rock star. Fueled by his passion for creativity, for over two
-        years,
-        Mark has immersed
-        himself in elite training programs with Meta, Google, Princeton, and others, excelling in all things UX,
-        web design, and web development.
-      </p>
-      <p>
-        Beyond
-        personal growth, he is cultivating a network of web developers, UX/UI designers, and software developers to
-        deliver
-        comprehensive client solutions. Fuller Design and Development epitomizes Mark's commitment to innovation
-        and
-        collaboration in the digital realm.
-      </p>
+<body>
+  <header id="header" style="
+  position: fixed;
+  top: 0; 
+  width: 100%; 
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  padding: .75px 1rem;
+  ">
+  </header>
+  <div class="body-content">
+    <h1 class="text-warning">About</h1>
+    <div class="flex">
+      <img id="younger" src="/assets/younger-480X480.webp" width="240" height="240" alt="Younger picture of Mark Fuller"
+        style="border-radius: .25rem; flex: 1;">
+      <div class="flex text-block" style="flex: 1">
+        <p>
+          Mark Fuller, the driving force behind Fuller Design and Development, is transitioning from a 15-year
+          career
+          as a
+          data network engineer into web developing rock star. Fueled by his passion for creativity, for over two
+          years,
+          Mark has immersed
+          himself in elite training programs with Meta, Google, Princeton, and others, excelling in all things UX,
+          web design, and web development.
+        </p>
+        <p>
+          Beyond
+          personal growth, he is cultivating a network of web developers, UX/UI designers, and software developers to
+          deliver
+          comprehensive client solutions. Fuller Design and Development epitomizes Mark's commitment to innovation
+          and
+          collaboration in the digital realm.
+        </p>
+      </div>
     </div>
-    <div class="" id="philosophy" style="clear: left;">
-      <h2>Design Philosophy: Minimalism</h2>
-      <img id="thinker" src="/assets/the-thinker.webp" width="247" height="201" alt="The Thinker">
-
-      <p>
-        Minimalistic web design is a design philosophy that focuses on simplicity, clarity, and functionality. It
-        emphasizes
-        removing unnecessary elements and distractions to create a clean and streamlined user interface. In minimalist
-        design,
-        less is more; every element serves a purpose and contributes to the overall user experience.
-      </p>
-
-
+    <h2>Design Philosophy: Minimalism</h2>
+    <div class="flex">
+      <div class="text-block">
+        <p style="flex: 1;">
+          Minimalistic web design is a design philosophy that focuses on simplicity, clarity, and functionality. It
+          emphasizes
+          removing unnecessary elements and distractions to create a clean and streamlined user interface. In
+          minimalist
+          design,
+          less is more; every element serves a purpose and contributes to the overall user experience.
+        </p>
+      </div>
+      <img id="thinker" src="/assets/the-thinker.webp" width="250" height="200" alt="The Thinker" style="flex: 1;">
     </div>
-
+  </div>
+  <footer id="footer" style="display: flex; flex-direction: column; position: fixed; bottom: 0;">
+  </footer>
+  <script src="/Components/header/header.js"></script>
+  <script src="/Components/footer/footer.js"></script>
 </body>
 
 </html>
