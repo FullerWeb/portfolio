@@ -110,7 +110,7 @@ h2 {
   width: 100%;
   min-width: 16rem;
   max-width: 20rem;
-  height: 50rem;
+  height: 52rem;
   margin: 0 auto;
 
 }
@@ -119,7 +119,7 @@ h2 {
   /* Fixed width for the card */
   background-color: var(--blue);
   display: none;
-  height: 45rem;
+  height: 52rem;
 
 }
 
