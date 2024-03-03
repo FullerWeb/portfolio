@@ -7,619 +7,251 @@
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
   <meta name="description"
     content="Fuller Design and Development offers comprehensive Web Design and Development services alongside expert Content Writing solutions. Elevate your online presence with tailored designs and compelling content.">
-  <link rel="preload" href="noncritical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="noncritical.css">
-  </noscript>
-  <title>Fuller D&D Portfolio</title>
+  <link rel="stylesheet" href="/css/style.css">
   <style>
     * {
-      box-sizing: border-box;
+      /* outline: 1px solid; */
+      --warning: #ffc107;
     }
 
-    :root {
-      --blue: #0b2d5c;
-      --white: #f4f4f4;
-      font-family: sans-serif;
-      letter-spacing: 1.3px;
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3rem;
     }
 
-    html {
-      background-color: black;
+    .card {
+      position: relative;
+      border: 1px solid rgb(84, 84, 84);
+      border-radius: .25rem;
+      width: 280px;
+      padding: 1rem;
+      color: whitesmoke;
+      background-color: transparent;
     }
 
-    html,
-    body {
-
-      margin: 0;
-    }
-
-    body {
-      max-width: 66rem;
-      margin: 0 auto;
-      background: var(--blue);
-      color: var(--white);
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    #hero h1 {
-      padding-inline: 1rem;
-    }
-
-    nav {
+    .card-header {
       display: flex;
       justify-content: space-between;
+      padding: .5rem;
+      border-bottom: 1px solid rgb(84, 84, 84);
+    }
+
+    .card-title {
+      color: var(--warning)
+    }
+
+    .card-view-link {
+      border: 1px solid var(--warning);
+      color: whitesmoke;
+      text-decoration: none;
+      padding-inline: .25rem;
+      padding-block: .15rem;
+      border-radius: .25rem;
+    }
+
+    .card-view-link:hover,
+    .card:focus {
+      box-shadow: 0px 0px 19px -3px var(--warning);
+    }
+
+    .card-body {
+      display: flex;
+      gap: 1rem;
+      padding: .75rem;
+    }
+
+    .card-sidebar {
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
-
+      gap: 2rem;
     }
 
-    #content-container {
-      padding-inline: 1rem;
-      
-    }
-
-    #hero {
+    .card-content {
+      flex: 2;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+
+      padding-inline: .25rem;
+
+    }
+
+    .logo {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1.75rem;
+      padding: .25rem;
+    }
+
+
+    .card-project-brand-logo {
+      height: auto;
       width: 100%;
     }
+
+    .card-h1 {
+      border-bottom: 1px solid rgb(82, 82, 82);
+      font-size: 1rem;
+      margin-bottom: 0;
+
+    }
+
+    .card-h3 {
+      font-size: .75rem;
+      margin-bottom: 0;
+    }
+
+    .card-text {
+      font-size: .75rem;
+    }
+
+    .project-desc {
+      padding-block: 1rem;
+      text-wrap: balance;
+      font-size: .75rem;
+    }
+
+    .stack {
+      padding-top: 1.25rem;
+      display: flex;
+      gap: .125rem;
+      height: 2rem;
+    }
+
+    .stack-logo {
+      height: 2rem;
+    }
+
+    /*Brand styling*/
+    #holy-feast-brand {
+
+      width: 4rem;
+      height: auto;
+      aspect-ratio: 3/4;
+    }
+
+    #copycart-brand {
+
+      padding-top: 1rem;
+      height: 2rem;
+      width: 100%;
+      border-radius: .25rem;
+
+    }
+
+    .stack-block {
+      display: flex;
+      position: absolute; 
+      bottom: .5rem; 
+      right: .5rem;
+
+    }
   </style>
+  <title>Fuller D&D | Portfolio</title>
 </head>
 
 <body>
-  <div id="overlay"></div>
-  <!-- ========== Start Header ========== -->
-  <header id="header">
-    <nav class="navbar">
-      <div class="brand">
-        <img src="./assets/brand.webp" width="36" height="33" alt="brand logo">
-        <div id="brand-name">
-          <span>Pawsitive</span>
-          <span>Paws</span>
-        </div>
-      </div>
-      <div class="menu-toggle">&#9776;</div>
-      <ul class="nav-links">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Partners</a></li>
-        <li><a href="#">Affiliates</a></li>
-        <li><a id="contact" href="#">Contact</a></li>
-      </ul>
-    </nav>
-
+  <header id="header" style="
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: .75px 1rem;
+    background-color: black;
+    ">
   </header>
-  <!-- ========== End Header ========== -->
-  <div id="hero">
-    <h1>The Wagging Chronicle</h1>
-    <img srcset="
-assets/golden-retreiver-300w.webp 300w, 
-assets/golden-retreiver-960w.webp 960w,
-assets/golden-retreiver-1360w.webp 1360w,
-assets/golden-retreiver-1660w.webp 1660w,
-assets/golden-retreiver-1920w.webp 1920w,
-" sizes="(min-width: 1120px) 1056px, calc(94.5vw + 17px)" src="assets/golden-retreiver-960w.web"
-      alt="Golden retriever lying down on grass." />
-  </div>
-    <div id="content-container">
-
-      <!-- ========== Start Intro ========== -->
-
-      <div id="introduction">
-        <div id="introContent">
-          <p>
-            Welcome, dog lovers, to the inaugural edition of <i>The Wagging Chronicle</i>! We're thrilled to embark on
-            this
-            journey with
-            you as we explore the wonderful world of dog walking and all the joys it brings to both our furry friends
-            and
-            ourselves.
-          </p>
-          <p>
-            In this newsletter, we'll be delving into everything from the myriad benefits of daily dog walks to expert
-            tips
-            for
-            ensuring safe and enjoyable outings with your canine companions. Whether you're a seasoned dog owner or a
-            new
-            pup parent
-            looking to enhance your walking routine, *The Wagging Chronicle* is your go-to resource for all things
-            related
-            to canine
-            exercise and exploration.
-          </p>
-          <p>
-            So, leash up your pups, lace up your walking shoes, and join us as we celebrate the simple pleasure of a
-            stroll
-            with our
-            four-legged pals. Let's make every walk an adventure to remember!
-          </p>
-        </div>
-      </div>
-
-      <!-- ========== End Intro ========== -->
-      <!-- ========== Start Feature Articles ========== -->
-      <div id="articles">
-        <h2>Featured Articles</h2>
-        <p>
-          Walking with our canine companions isn't just about getting from point A to point B—it's an essential activity
-          that
-          brings a multitude of benefits to both dogs and their human companions. In this article, we'll explore the
-          numerous
-          advantages of incorporating daily walks into your routine and why they're crucial for the health and happiness
-          of both
-          you and your furry friend.
-        </p>
-        <div class="cards">
-          <article class="card" id="article1">
-            <h3 class="articleHeader">Physical Health Benefits</h3>
-            <img src="assets/woman-running-with-her-dog.webp" data-src="assets/woman-running-with-her-dog.webp"
-              alt="An image of a woman running with her dog in a park at dawn." width="505" height="373"
-              class="lazyload">
-            <div class="content">
-              <p>Just like humans, our furry companions require regular exercise to maintain their overall health and
-                well-being. From
-                keeping a healthy weight to strengthening muscles and improving cardiovascular health, physical activity
-                plays a crucial
-                role in a dog's life. Daily walks offer the perfect opportunity for dogs to engage in the exercise they
-                need to thrive.
-              </p>
-
-            </div>
-          </article>
-          <article class="card" id="article2">
-            <h3 class="articleHeader">Mental Health Benefits</h3>
-            <img src="assets/a-man-with-PTSD-walking-his-service-dog.webp"
-              data-src="assets/a-man-with-PTSD-walking-his-service-dog.webp"
-              alt="An image of a man with PTSD walking walking his dog." width="505" height="373" class="lazyload">
-            <div class="content">
-              <p>For our canine companions, walks offer much more than just physical exercise—they provide vital mental
-                stimulation that
-                is essential for their overall well-being. Dogs are naturally curious creatures, and exploring new
-                sights,
-                smells, and
-                sounds during walks offers valuable mental enrichment. This stimulation prevents boredom and reduces the
-                likelihood of
-                destructive behaviors at home, keeping our furry friends engaged and happy.
-              </p>
-            </div>
-          </article>
-          <article class="card" id="article3">
-            <h3 class="articleHeader">Socialization Benefits</h3>
-            <img src="assets/happy-couple-walking-their-dog.webp" data-src="assets/happy-couple-walking-their-dog.webp"
-              alt="Happy couple walking their dog through a field." class="lazyload" width="505" height="373">
-            <div class="content">
-              <p>Dogs, by their very nature, are social creatures, thriving on interactions with both their human
-                companions and fellow
-                canines. Taking your furry friend for walks not only benefits their physical health but also fulfills
-                their innate need
-                for social interaction.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- ========== End Feature Articles ========== -->
-
-      <!-- ========== Start Breeds Carousel ========== -->
-      <div style="display: flex; gap: 2rem; flex-wrap:wrap; margin-bottom:2rem">
-        <div style="display: flex; flex-direction: column; flex:1;">
-          <h2>
-            Breed Spotlight: Best Breeds for Walking
-          </h2>
-          <p style="padding-bottom: 1rem;">
-            When it comes to finding the perfect walking companion, not all dogs are created equal. While any dog can
-            enjoy
-            a stroll
-            around the block, certain breeds are particularly well-suited for longer hikes, brisk jogs, or outdoor
-            adventures. Here
-            are some breeds known for their love of walking and their ability to keep pace with even the most active of
-            owners.
-          </p>
-          <div class="carousel">
-            <div class="slide active">
-              <img srcset="
-          assets/golden-retreiver-300w.webp 300w, 
-          assets/golden-retreiver-960w.webp 960w,
-          assets/golden-retreiver-1360w.webp 1360w,
-          assets/golden-retreiver-1660w.webp 1660w,
-          assets/golden-retreiver-1920w.webp 1920w,
-          " sizes="(min-width: 500px) 256px, (min-width: 400px) 320px, calc(56.25vw + 106px)"
-                src="assets/golden-retreiver-960w.web" alt="Golden retriever lying down on grass." class="lazyload" />
-              <div class="info">
-                <h3>Golden Retriever</h3>
-                <h4>Energy Level</h4>
-                <p>
-                  Labradors are known for their boundless energy and enthusiasm for outdoor activities. They thrive on
-                  regular
-                  exercise and make excellent walking companions for active individuals or families.
-                </p>
-                <h4>Temperament</h4>
-                <p>
-                  Friendly, outgoing, and eager to please, Labradors are known for their gentle demeanor and sociable
-                  nature,
-                  making them great companions for both humans and other dogs.
-                </p>
-                <h4>
-                  Versatility
-                </h4>
-                <p>
-                  Whether it's a leisurely stroll around the neighborhood or a day-long hike in the mountains, Labradors
-                  are up
-                  for any adventure and adapt well to various terrains and environments.
-                </p>
-              </div>
-            </div>
-            <div class="slide">
-              <img src="assets/border-collie.webp" data-src="assets/border-collie.webp" id="slide2" alt="Border Collie"
-                class="lazyload">
-              <div class="info">
-                <h3>Border Collie</h3>
-                <h4>Energy Level</h4>
-                <p>
-                  Border Collies are renowned for their intelligence, agility, and high energy levels. They excel at
-                  activities
-                  that
-                  challenge both their minds and bodies, making them ideal walking partners for active individuals who
-                  enjoy
-                  mental
-                  stimulation as well as physical exercise.
-                </p>
-                <h4>Trainability</h4>
-                <p>
-                  Highly trainable and eager to please, Border Collies thrive on learning new skills and tasks. They
-                  make
-                  excellent
-                  candidates for obedience training and can easily learn to walk politely on leash.
-                </p>
-                <h4>
-                  Work Ethic
-                </h4>
-                <p>
-                  Bred for herding livestock, Border Collies have a strong work ethic and enjoy having a job to do.
-                  Regular
-                  walks provide
-                  an outlet for their natural instincts and help prevent boredom or destructive behaviors.
-                </p>
-              </div>
-            </div>
-            <div class="slide">
-              <img src="assets/australian-shepherd.webp" data-src="assets/australian-shepherd.webp" id="slide3"
-                alt="Australian Shepherd" class="lazyload">
-              <div class="info">
-                <h3>Australian Shepherd</h3>
-                <h4>Energy Level</h4>
-                <p>
-                  Australian Shepherds have a moderate to high energy level and require regular exercise to keep them
-                  mentally
-                  and
-                  physically stimulated. Daily walks provide an opportunity for them to burn off excess energy and
-                  prevent
-                  boredom.
-                </p>
-                <h4>Intelligence</h4>
-                <p>
-                  Australian Shepherds are highly intelligent and versatile dogs known for their agility, athleticism,
-                  and
-                  problem-solving
-                  abilities. They excel at activities that engage both their minds and bodies, making them excellent
-                  walking
-                  companions
-                  for active individuals.
-                </p>
-                <h4>
-                  Versatility
-                </h4>
-                <p>
-                  Whether it's hiking, jogging, or participating in canine sports like agility or obedience, Australian
-                  Shepherds thrive
-                  on a variety of outdoor activities and enjoy exploring new environments with their owners.
-                </p>
-              </div>
-            </div>
-            <div class="slide">
-              <img src="assets/vizsla.webp" data-src="assets/vizsla.webp" id="slide4" alt="Visla" class="lazyload">
-              <div class="info">
-                <h3>Vizsla</h3>
-                <h4>Energy Level</h4>
-                <p>
-                  Vizslas are known for their remarkable endurance and stamina, making them excellent walking partners
-                  for
-                  active
-                  individuals who enjoy long-distance hikes or jogs. They have a natural aptitude for endurance sports
-                  and
-                  excel
-                  at
-                  activities that require sustained physical exertion.
-                </p>
-                <h4>Trainability</h4>
-                <p>
-                  Vizslas are intelligent and eager to please, making them highly trainable and responsive to obedience
-                  training. With
-                  consistent training and positive reinforcement, they can learn to walk politely on leash and respond
-                  reliably
-                  to
-                  commands.
-                </p>
-                <h4>
-                  Affectionate Nature
-                </h4>
-                <p>
-                  Vizslas are affectionate, loyal, and highly bonded to their owners. They thrive on companionship and
-                  enjoy
-                  spending time
-                  with their families, making them great walking companions for those who value a close bond with their
-                  canine
-                  companion.
-                </p>
-              </div>
-            </div>
-            <div class="slide">
-              <img src="assets/german-shepherd.webp" data-src="assets/german-shepherd.webp" id="slide5"
-                alt="German Shepherd" class="lazyload">
-              <div class="info">
-                <h3>German Shepherd</h3>
-                <h4>Intelligence</h4>
-                <p>
-                  German Shepherds are highly intelligent and trainable dogs known for their versatility and
-                  adaptability.
-                  They
-                  excel at a
-                  wide range of activities, including walking, hiking, obedience, and even service work.
-                </p>
-                <h4>Protective Instincts</h4>
-                <p>
-                  German Shepherds have a strong protective instinct and are naturally loyal and devoted to their
-                  families. They
-                  make
-                  excellent walking companions for those who value security and appreciate having a watchful eye by
-                  their
-                  side.
-                </p>
-                <h4>
-                  Physical Ability
-                </h4>
-                <p>
-                  German Shepherds are strong, agile, and athletic dogs capable of covering long distances with ease.
-                  They
-                  thrive on
-                  regular exercise and enjoy activities that challenge them both mentally and physically.
-                </p>
-              </div>
-            </div>
-            <button class="prev">&#8249;</button>
-            <button class="next">&#8250;</button>
+  <div class="body-content">
+    <h1 class="text-warning">Portfolio</h1>
+    <h2>Web Development</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Customer Survey</span>
+          <div>
+            <a class="card-view-link" href="../front-end/holyfeast/" target="_blank">View</a>
           </div>
-
-          <!-- ========== End Breeds Carousel ========== -->
         </div>
-
-
-        <!-- ========== Start Health Check ========== -->
-
-        <div id="healthCheck" style="flex: 3;">
-          <h2>&#10004; Health Check: 8 Tips for Preventing Injuries During Walks</h2>
-          <p>Ensuring the safety and well-being of your furry friend during walks goes beyond using the right gear and
-            following
-            proper walking etiquette. It also involves taking proactive steps to prevent common injuries that can occur
-            while out
-            and about. Here are some essential tips to help keep your dog safe and injury-free during walks.</p>
-          <ol>
-            <li>
-              <h3>
-                Warm-Up and Cool Down
-              </h3>
-              <p>
-                Just like humans, dogs benefit from a proper warm-up and cool-down routine before and after physical
-                activity. Start
-                walks at a slow pace to allow your dog's muscles to warm up gradually, and end with a leisurely stroll
-                to
-                help them cool
-                down and prevent muscle strain.
-              </p>
-            </li>
-            <li>
-              <h3>
-                Watch for Signs of Overexertion
-              </h3>
-              <p>
-                Pay attention to your dog's body language and watch for signs of fatigue or overexertion during walks,
-                such as excessive
-                panting, lagging behind, or reluctance to continue. Take breaks as needed and offer water to keep them
-                hydrated.
-              </p>
-            </li>
-            <li>
-              <h3>Use Proper Walking Equipment</h3>
-              <p>
-                Invest in high-quality walking gear, including a well-fitted leash and harness or collar appropriate for
-                your dog's size
-                and breed. Avoid retractable leashes, which can pose a tripping hazard and offer less control over your
-                dog's movements.
-              </p>
-            </li>
-            <li>
-              <h3>
-                Avoid Overheating
-              </h3>
-              <p>
-                Dogs are susceptible to heatstroke, especially in hot and humid weather. Limit walks during the hottest
-                parts of the
-                day, provide access to shade and water, and avoid walking on hot pavement, which can burn your dog's paw
-                pads.
-              </p>
-            </li>
-            <li>
-              <h3>
-                Protect Against Paw Injuries
-              </h3>
-              <p>Inspect your dog's paw pads regularly for cuts, abrasions, or foreign objects like thorns or glass.
-                Consider using paw
-                wax or booties to protect your dog's paws from rough terrain, extreme temperatures, or chemical
-                exposure.
-              </p>
-            </li>
-            <li>
-              <h3>Practice Good Leash Management</h3>
-              <p>
-                Maintain control of your dog's leash at all times to prevent tripping, tangling, or sudden jerking
-                movements that can
-                lead to injury. Keep the leash short enough to maintain control but loose enough to allow your dog to
-                move
-                comfortably.
-              </p>
-            </li>
-            <li>
-              <h3>
-                Be Mindful of Terrain
-              </h3>
-              <p>
-                Choose walking routes that are appropriate for your dog's age, health, and physical condition. Avoid
-                steep
-                inclines or
-                uneven surfaces that could increase the risk of slips, falls, or musculoskeletal injuries, especially
-                for
-                senior dogs or
-                those with mobility issues.
-              </p>
-            </li>
-            <li>
-              <h3>Monitor for Signs of Injury</h3>
-              <p>
-                After walks, check your dog for any signs of injury or discomfort, such as limping, favoring a
-                particular
-                leg, or
-                excessive licking or chewing of a specific area. If you notice any signs of injury, consult with your
-                veterinarian for
-                proper evaluation and treatment.
-              </p>
-            </li>
-          </ol>
-          <p>
-            By following these tips and being proactive about injury prevention, you can help ensure that every walk is
-            a
-            safe and
-            enjoyable experience for you and your canine companion. Remember to listen to your dog's cues, respect their
-            physical
-            limitations, and prioritize their well-being above all else. With proper care and attention, you can
-            minimize
-            the risk
-            of injuries and make each walk a positive and enriching experience for both of you.
-          </p>
+        <div class="card-body">
+          <div class="card-sidebar">
+            <img id="holy-feast-brand" src="/assets/client-brands/holy-feast.webp" alt="Holy Feast Logo">
+          </div>
+          <div class="card-content">
+            <h1 class="card-h1">Holy Feast</h1>
+            <span class="project-desc">Created multipart form to capture customers' current dining experience.</span>
+            <div class="stack">
+              <div class="stack-block">
+                <img src="/assets/stack-icons/html-css-js.webp" class="stack-logo" alt="">
+                <img src="/assets/stack-icons/sheets-logo.webp" class="stack-logo" alt="">
+                <img src="/assets/stack-icons/GAnalytics-48X48.webp" width=32 height="32" alt="" class="stack-logo">
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- ========== End Health Check ========== -->
-
+        <img src="/assets/fddLogo-24X24.webp" class="logo" alt="" />
       </div>
-      <!-- ========== Start Conclusion ========== -->
-
-      <div id="conclusion" style="text-align: center;">
-        <h2>Lapping Up</h2>
-        <p>As we wrap up another edition of The Wagging Chronicle, we're filled with gratitude for the opportunity to
-          connect with
-          fellow dog lovers and share our passion for all things canine. From heartwarming stories and expert tips to
-          community
-          highlights and walking adventures, it's been a pleasure exploring the joys of dog walking together.
-        </p>
-        <p>
-          As we bid farewell to this edition, we're reminded of the simple yet profound pleasures that come from
-          spending
-          time
-          outdoors with our furry companions. Whether it's a leisurely stroll through the neighborhood or an
-          exhilarating
-          hike in
-          the great outdoors, every walk is an opportunity to strengthen the bond between us and our dogs, one step at
-          a
-          time.
-        </p>
-        <p>
-          We want to extend a heartfelt thank you to our readers, contributors, and partners for your ongoing support
-          and
-          enthusiasm. Your stories, insights, and feedback inspire us to continue sharing the magic of dog walking
-          with
-          the world.
-        </p>
-        <p>
-          As we look ahead to future editions of The Wagging Chronicle, we invite you to stay connected, share your
-          stories, and
-          join us on our journey to celebrate the incredible bond between humans and dogs. Together, let's make every
-          walk
-          an
-          adventure to remember!
-
-          Until next time, may your tails wag, your paws explore, and your hearts be filled with the love and
-          companionship of
-          your loyal canine companions.
-
-        <p>Wishing you many wag-worthy adventures,</p>
-        <p>The Pawsitives<br>
-          media@pawsitivespawsdemo.org</p>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Figma Conversion</span>
+          <div class="">
+            <a class="card-view-link" href="../front-end/copycart/" target="_blank">View</a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-sidebar">
+            <img id="copycart-brand" src="/assets/client-brands/copycart.webp" alt="Holy Feast Logo" width="122"
+              height="20">
+          </div>
+          <div class="card-content">
+            <h1 class="card-h1">COPYCART</h1>
+            <span class="project-desc">Converted Figma design to mobile UI.</span>
+            <div class="stack">
+              <div class="stack-block">
+                <img src="/assets/stack-icons/html-css-js.webp" class="stack-logo" alt="">
+                <img src="/assets/stack-icons/figma-logo-512.webp" class="stack-logo" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="/assets/fddLogo-24X24.webp" class="logo" alt="" />
       </div>
-
-      <!-- ========== End Conclusion ========== -->
-      <!-- ========== Start Disclimer ========== -->
-
-      <div id="disclaimer" class="disclaimer">
-        <h3>Disclaimer</h3>
-
-        <p>The content provided in The Wagging Chronicle newsletter is intended for informational purposes only. While
-          every effort
-          has been made to ensure the accuracy and reliability of the information presented, we make no representations
-          or
-          warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or
-          availability
-          with respect to the content contained herein.</p>
-        <p>
-          The information provided in this newsletter is not intended to replace professional veterinary advice,
-          diagnosis, or
-          treatment. Always seek the advice of your veterinarian or qualified pet care provider with any questions you
-          may
-          have
-          regarding your pet's health or medical condition. Never disregard professional veterinary advice or delay in
-          seeking it
-          because of something you have read in this newsletter.
-        </p>
-        <p>Furthermore, The Wagging Chronicle newsletter may contain links to third-party websites or resources for
-          informational
-          purposes only. We do not endorse or guarantee the accuracy, relevance, or reliability of any content,
-          products,
-          services, or information provided on these external sites. Accessing and using third-party websites or
-          resources
-          linked
-          from The Wagging Chronicle newsletter is done at your own risk.</p>
-        <p>
-          In no event shall we be liable for any loss or damage, including without limitation, indirect or consequential
-          loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in
-          connection
-          with, the
-          use of The Wagging Chronicle newsletter.
-        </p>
-        <p>By accessing or using The Wagging Chronicle newsletter, you acknowledge and agree to abide by the terms of
-          this
-          disclaimer. If you do not agree with any part of this disclaimer, you are advised not to access or use The
-          Wagging
-          Chronicle newsletter.</p>
-        <button id="closeBtn">Close</button>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Web Newsletter (Demo)</span>
+          <div class="">
+            <a class="card-view-link" href="../front-end/waggingChronicle/" target="_blank">View</a>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-sidebar">
+            <img id="pawsitive-paws-brand" src="/assets/client-brands/pawsitivePaws.webp" alt="Holy Feast Logo">
+          </div>
+          <div class="card-content">
+            <h1 class="card-h1">Pawsitive Paws</h1>
+            <spam class="project-desc">Designed, developed, and composed an online newsletter.</span>
+              <div class="stack">
+                <div class="stack-block">
+                  <img src="/assets/stack-icons/html-css-js.webp" class="stack-logo" alt="">
+                </div>
+              </div>
+          </div>
+        </div>
+        <img src="/assets/fddLogo-24X24.webp" class="logo" alt="" />
       </div>
-
-      <!-- ========== End Disclimer ========== -->
 
     </div>
-
-    <!-- ========== Start Scripts ========== -->
-
-    <script src="js/script.js"></script>
-    <script src="js/breedsCarousel.js"></script>
-    <script src="js/lazysizes.min.js" async></script>
-    <!-- ========== End Scripts ========== -->
-
-
+  </div>
+  <footer id="footer" style="display: flex; flex-direction: column; height: 10rem; position: fixed; bottom: 0;">
+  </footer>
+  <script src="/Components/header/header.js"></script>
+  <script src="/Components/footer/footer.js"></script>
 </body>
 
 </html>
