@@ -47,14 +47,11 @@
       object-fit: cover;
     }
 
-    #hero h1 {
-      padding-inline: 1rem;
-    }
-
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      color: var(--blue);
 
     }
 
@@ -72,6 +69,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
+        padding-inline: 1rem;
         width: auto;
         border-radius: 0 1rem 1rem 0;
         text-align: start;
@@ -81,6 +79,14 @@
         font-size: 2rem;
       }
     }
+
+    .menu-toggle {
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    
   </style>
 </head>
 
@@ -96,7 +102,7 @@
           <span>Paws</span>
         </div>
       </div>
-      <div class="menu-toggle">&#9776;</div>
+      <div class="menu-toggle">&#9776</div>
       <ul class="nav-links">
         <li><a href="#">About</a></li>
         <li><a href="#">Partners</a></li>
@@ -623,7 +629,6 @@ assets/golden-retreiver-1920w.webp 1920w,
   </div>
 
   <!-- ========== Start Scripts ========== -->
-
   <script src="js/script.js"></script>
   <script src="js/breedsCarousel.js"></script>
   <script src="js/lazysizes.min.js" async></script>
