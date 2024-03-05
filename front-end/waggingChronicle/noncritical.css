@@ -309,6 +309,7 @@ button {
     top: 3.6rem;
     left: 0;
     width: 100%;
+    z-index:1;
     background-color: var(--white);
     padding: 10px;
     text-align: center;
