@@ -1,228 +1,232 @@
- *{
-    margin: 0;
-    box-sizing: border-box;
-  }
+ * {
+   margin: 0;
+   box-sizing: border-box;
+ }
 
-  :root {
+ :root {
 
-    --headerHeight: 6rem;
-    --footerHeight: 5%;
-    --med-green: #2c5842;
-    --blue-green: #0e2832;
-    --yellow: #bbac4d;
-    --white: #f5f5f5;
-    --red: #713012;
+   --headerHeight: 6rem;
+   --footerHeight: 5%;
+   --med-green: #2c5842;
+   --blue-green: #0e2832;
+   --yellow: #bbac4d;
+   --white: #f5f5f5;
+   --red: #713012;
 
-    --max-width: 71.25rem;
-    --main-pad-inline: 2rem;
-  }
+   --max-width: 71.25rem;
+   --main-pad-inline: 2rem;
+ }
 
-  html {
-    background-color: var(--blue-green);
-  }
+ html {
+   background-color: var(--blue-green);
+ }
 
-  body {
-    max-width: 71.25rem;
-    margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
-  }
+ body {
+   max-width: 71.25rem;
+   margin: 0 auto;
+   font-family: 'Montserrat', sans-serif;
+ }
 
-  img {
-    display: block;
-  }
+ img {
+   display: block;
+ }
 
-  header,
-  .carousel-container,
-  footer {
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
+ header,
+ .carousel-container,
+ footer {
+   padding: 1rem;
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+ }
 
-  header,
-  footer {
-    align-items: center;
-    background-color: var(--med-green);
-    color: var(--white);
-    font-family: 'Lora', serif;
-  }
+ header,
+ footer {
+   align-items: center;
+   background-color: var(--med-green);
+   color: var(--white);
+   font-family: 'Lora', serif;
+ }
 
-  .carousel-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 85dvh;
-    background-color: var(--yellow);
-
-
-    .carousel {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      & img {
-        flex: 1;
-        width: 100%;
-        aspect-ratio: 3/2;
-        height: auto;
-        border-radius: .25rem;
-      }
-
-      .post-title {
-        color: var(--red);
-        font-size: 1.5rem;
-        font-weight: bold;
-        text-align: start;
-      }
-
-      .carousel-slide {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        transition: transform 0.5s ease;
-
-        .slide-body {
-          width: auto;
-          flex: 1;
-
-          p {
-            max-width: 44ch;
-          }
-        }
-      }
-
-      .final-slide {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-
-        & img {
-          max-width: 50%;
-          height: auto;
-          aspect-ratio: 1/.9;
-        }
-
-        & button {
-          background-color: var(--med-green);
-          color: var(--white);
-        }
-
-        .subscription-form {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-wrap: balance;
-        }
-
-        .subscription-form input[type="email"],
-        .subscription-form button {
-          margin: .6rem;
-          padding: .5rem 1rem;
-          border: 1px solid var(--med-green);
-          border-radius: .25rem;
-        }
-
-        .topics {
-          margin-top: 1.25rem;
-        }
-
-        .topics p {
-          margin-bottom: .25rem;
-        }
-
-        .topics label {
-          display: inline-block;
-          /* Ensure labels and checkboxes stay together */
-          margin-right: .6rem;
-        }
-      }
-    }
-
-    .carousel-controls {
-      width: auto;
-      position: absolute;
-      bottom: 0;
-      /* Adjust as needed */
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-
-      .prev,
-      .next {
-        width: 1.75rem;
-        height: 1.75rem;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: var(--white);
-        border: 2px solid white;
-        border-radius: 50%;
-        font-size: .75rem;
-        cursor: pointer;
-      }
-
-      .prev {
-        left: 0;
-      }
-
-      .next {
-        right: 0;
-      }
-
-      .carousel-dots {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        /* Adjust as needed */
-      }
+ .carousel-container {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 85dvh;
+   background-color: var(--yellow);
 
 
-      .dot {
-        height: 10px;
-        width: 10px;
-        background-color: #bbb;
-        border-radius: 50%;
-        cursor: pointer;
-      }
+   .carousel {
+     display: flex;
+     justify-content: center;
+     align-items: center;
 
-      .active {
-        background-color: var(--med-green);
-      }
-    }
-  }
+     & img {
+       flex: 1;
+       width: 100%;
+       aspect-ratio: 3/2;
+       height: auto;
+       border-radius: .25rem;
+     }
 
-  /* Media query for small screens */
-  @media screen and (max-width: 768px) {
-    body {
-      font-size: 14px;
-    }
+     .post-title {
+       color: var(--red);
+       font-size: 1.5rem;
+       font-weight: bold;
+       text-align: start;
+     }
 
-    .carousel {
-      & img {
-        max-width: 30rem;
-      }
-    }
+     .carousel-slide {
+       width: 100%;
+       display: flex;
+       justify-content: center;
+       gap: 1rem;
+       transition: transform 0.5s ease;
 
-    .carousel-slide {
-      flex-direction: column;
-      align-items: center;
-      text-align: start;
+       .slide-body {
+         width: auto;
+         flex: 1;
 
-      .slide-body {
-        flex: 1;
-      }
-    }
+         p {
+           max-width: 44ch;
+         }
+       }
+     }
 
-  }
+     .final-slide {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       text-align: center;
 
-  /* Media query for extra small screens */
-  @media screen and (max-width: 340px) {
-    body {
-      font-size: 12px;
-    }
-  }
+       & img {
+         width: 25%;
+         height: auto;
+         aspect-ratio: 1/.9;
+       }
+
+       & p {
+         max-width: 44ch;
+       }
+
+       & button {
+         background-color: var(--med-green);
+         color: var(--white);
+       }
+
+       .subscription-form {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-wrap: balance;
+       }
+
+       .subscription-form input[type="email"],
+       .subscription-form button {
+         margin: .6rem;
+         padding: .5rem 1rem;
+         border: 1px solid var(--med-green);
+         border-radius: .25rem;
+       }
+
+       .topics {
+         margin-top: 1.25rem;
+       }
+
+       .topics p {
+         margin-bottom: .25rem;
+       }
+
+       .topics label {
+         display: inline-block;
+         /* Ensure labels and checkboxes stay together */
+         margin-right: .6rem;
+       }
+     }
+   }
+
+   .carousel-controls {
+     width: auto;
+     position: absolute;
+     bottom: 0;
+     /* Adjust as needed */
+     left: 50%;
+     transform: translateX(-50%);
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+
+     .prev,
+     .next {
+       width: 1.75rem;
+       height: 1.75rem;
+       background-color: rgba(0, 0, 0, 0.5);
+       color: var(--white);
+       border: 2px solid white;
+       border-radius: 50%;
+       font-size: .75rem;
+       cursor: pointer;
+     }
+
+     .prev {
+       left: 0;
+     }
+
+     .next {
+       right: 0;
+     }
+
+     .carousel-dots {
+       flex: 1;
+       display: flex;
+       justify-content: center;
+       gap: 10px;
+       /* Adjust as needed */
+     }
+
+
+     .dot {
+       height: 10px;
+       width: 10px;
+       background-color: #bbb;
+       border-radius: 50%;
+       cursor: pointer;
+     }
+
+     .active {
+       background-color: var(--med-green);
+     }
+   }
+ }
+
+ /* Media query for small screens */
+ @media screen and (max-width: 768px) {
+   body {
+     font-size: 14px;
+   }
+
+   .carousel {
+     & img {
+       max-width: 30rem;
+     }
+   }
+
+   .carousel-slide {
+     flex-direction: column;
+     align-items: center;
+     text-align: start;
+
+     .slide-body {
+       flex: 1;
+     }
+   }
+
+ }
+
+ /* Media query for extra small screens */
+ @media screen and (max-width: 340px) {
+   body {
+     font-size: 12px;
+   }
+ }
