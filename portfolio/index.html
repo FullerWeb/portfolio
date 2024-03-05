@@ -25,7 +25,9 @@
       position: relative;
       border: 1px solid rgb(84, 84, 84);
       border-radius: .25rem;
-      width: 280px;
+      min-width: 15rem;
+      max-width: 22rem;
+      width: 100%;
       padding: 1rem;
       color: whitesmoke;
       background-color: transparent;
@@ -60,6 +62,11 @@
       display: flex;
       gap: 1rem;
       padding: .75rem;
+    }
+
+    ul {
+      margin-block-start: 0;
+      padding-inline-start: 1rem;
     }
 
     .card-sidebar {
@@ -147,8 +154,8 @@
 
     .stack-block {
       display: flex;
-      position: absolute; 
-      bottom: .5rem; 
+      position: absolute;
+      bottom: .5rem;
       right: .5rem;
 
     }
@@ -185,7 +192,11 @@
           </div>
           <div class="card-content">
             <h1 class="card-h1">Holy Feast</h1>
-            <span class="project-desc">Created multipart form to capture customers' current dining experience.</span>
+            <ul>
+              <li>Web Design</li>
+              <li>Web Development</li>
+              <li>Content Writing</li>
+            </ul>
             <div class="stack">
               <div class="stack-block">
                 <img src="/assets/stack-icons/html-css-js.webp" class="stack-logo" alt="">
@@ -211,7 +222,11 @@
           </div>
           <div class="card-content">
             <h1 class="card-h1">COPYCART</h1>
-            <span class="project-desc">Converted Figma design to mobile UI.</span>
+            <ul>
+              <li>
+                Wed Development
+              </li>
+            </ul>
             <div class="stack">
               <div class="stack-block">
                 <img src="/assets/stack-icons/html-css-js.webp" class="stack-logo" alt="">
@@ -235,7 +250,11 @@
           </div>
           <div class="card-content">
             <h1 class="card-h1">Pawsitive Paws</h1>
-            <spam class="project-desc">Designed, developed, and composed an online newsletter.</span>
+              <li>
+                Web Design
+              </li>
+              <li>Web Development</li>
+              <li>Content Writing</li>
               <div class="stack">
                 <div class="stack-block">
                   <img src="/assets/stack-icons/html-css-js.webp" class="stack-logo" alt="">
