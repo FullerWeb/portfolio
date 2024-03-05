@@ -101,7 +101,7 @@
        text-align: center;
 
        & img {
-         width: 25%;
+         max-width: 8rem;
          height: auto;
          aspect-ratio: 1/.9;
        }
