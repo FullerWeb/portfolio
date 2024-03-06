@@ -53,7 +53,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 85dvh;
+   height: 82dvh;
    background-color: var(--yellow);
 
 
@@ -70,20 +70,28 @@
        border-radius: .25rem;
      }
 
-     .post-title {
+     #post-title {
+      width: 100%;
+      outline: 1pd solid;
        color: var(--red);
        font-size: 1.5rem;
        font-weight: bold;
-       text-align: start;
+       text-align: center;
      }
-
+     
      .carousel-slide {
        width: 100%;
        display: flex;
        justify-content: center;
        gap: 1rem;
        transition: transform 0.5s ease;
-
+       
+       & h3 {
+        width: 100%;
+        font-size: 1.15rem;
+        text-align:left;
+        color: var(--red);
+       }
        .slide-body {
          width: auto;
          flex: 1;
@@ -149,7 +157,7 @@
    .carousel-controls {
      width: auto;
      position: absolute;
-     bottom: 0;
+     bottom: .25rem;
      /* Adjust as needed */
      left: 50%;
      transform: translateX(-50%);
@@ -159,11 +167,11 @@
 
      .prev,
      .next {
-       width: 1.75rem;
-       height: 1.75rem;
+       width: 2.5rem;
+       height: 2.5rem;
        background-color: rgba(0, 0, 0, 0.5);
        color: var(--white);
-       border: 2px solid white;
+       border: 2px solid var(--white);
        border-radius: 50%;
        font-size: .75rem;
        cursor: pointer;
@@ -181,14 +189,14 @@
        flex: 1;
        display: flex;
        justify-content: center;
-       gap: 10px;
+       gap: .5rem;
        /* Adjust as needed */
      }
 
 
      .dot {
-       height: 10px;
-       width: 10px;
+       height: .75rem;
+       width: .75rem;
        background-color: #bbb;
        border-radius: 50%;
        cursor: pointer;
