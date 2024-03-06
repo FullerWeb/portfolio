@@ -13,7 +13,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <title>Fuller D&D | Portfolio</title>
 
 </head>
@@ -26,11 +26,11 @@
   <div class="carousel-container">
     <div class="carousel">
       <div class="carousel-slide">
-          <span style="width: 4rem;height: .4rem; border-radius: .25rem; background-color: var(--red);
+        <span style="width: 4rem;height: .4rem; border-radius: .25rem; background-color: var(--red);
           "></span><br>
-          <h2 id="post-title">Boost Your Wellness</h2>
-          <img src="assets/woman-on-beach-performing-yoga.webp" width="384" height="255"
-            alt="A woman meditating at dawn on a beach.">
+        <h2 id="post-title">Boost Your Wellness</h2>
+        <img src="assets/woman-on-beach-performing-yoga.webp" width="384" height="255"
+          alt="A woman meditating at dawn on a beach.">
         <div class="slide-body">
           <h3>Simple Practices for a Healthier
             You</h3>
@@ -71,13 +71,13 @@
         </div>
       </div>
       <div class="carousel-slide">
-      
-          <h2 style="text-wrap: balance;">
-            Actionable Tips for Boosting Wellness
-          </h2>
-          <img src="assets/a-group-of-people-having-a-picnic-in-a-city-park-at dusk-384.webp"
-            alt="A group of people having a picnic in a city park at dusk." width="384" height="255">
-       
+
+        <h2 style="text-wrap: balance;">
+          Actionable Tips for Boosting Wellness
+        </h2>
+        <img src="assets/a-group-of-people-having-a-picnic-in-a-city-park-at dusk-384.webp"
+          alt="A group of people having a picnic in a city park at dusk." width="384" height="255">
+
       </div>
       <div class="carousel-slide">
         <h3>Prioritize Self Care</h3>
@@ -152,15 +152,8 @@
           width="384" height="255">
         <div class="slide-body">
           <p>
-            Incorporating wellness practices into your daily life can lead to profound benefits for your overall
-            health and
-            well-being. By prioritizing self-care, fostering social connections, cultivating mindfulness, and
-            embracing lifelong
-            learning, you can embark on a journey towards a healthier, more fulfilling life.
-            Remember that wellness is a lifelong
-            pursuit, and small, consistent actions can make a significant difference in your quality of life. Start
-            implementing
-            these practices today and watch as they transform your wellness journey for the better.
+            Incorporating wellness practices into your daily life can lead to profound benefits for your overall health and well-being. By prioritizing self-care, fostering social connections, cultivating mindfulness, and embracing lifelong learning, you can embark on a journey towards a healthier, more fulfilling life.
+            Wellness is a lifelong pursuit, and small, consistent actions can make a significant difference in your quality of life. Start implementing these practices today and watch as they transform your wellness journey for the better.
           </p>
         </div>
       </div>
@@ -174,15 +167,21 @@
         <form class="subscription-form">
           <input type="email" placeholder="Your Email Address" required>
           <div class="topics">
-            <p style="display: inline-block; width: 100%;">Select Topics of Interest:</p><br>
-            <label><input type="checkbox" name="topic" value="Physical"> Physical</label>
-            <label><input type="checkbox" name="topic" value="Emotional"> Emotional</label>
-            <label><input type="checkbox" name="topic" value="Social"> Social</label>
-            <label><input type="checkbox" name="topic" value="Intellectual"> Intellectual</label><br>
-            <label><input type="checkbox" name="topic" value="Occupational"> Occupational</label>
-            <label><input type="checkbox" name="topic" value="Environmental"> Environmental</label>
-            <label><input type="checkbox" name="topic" value="Spiritual"> Spiritual</label>
-            <label><input type="checkbox" name="topic" value="Financial"> Financial</label>
+            <p id="options-heading"><strong>Select Topics of Interest</strong></p><br>
+            <div id="options-container">
+              <div class="form-options">
+                <label><input type="checkbox" name="topic" value="Physical"> Physical</label>
+                <label><input type="checkbox" name="topic" value="Emotional"> Emotional</label>
+                <label><input type="checkbox" name="topic" value="Social"> Social</label>
+                <label><input type="checkbox" name="topic" value="Intellectual"> Intellectual</label><br>
+              </div>
+              <div class="form-options">
+                <label><input type="checkbox" name="topic" value="Occupational"> Occupational</label>
+                <label><input type="checkbox" name="topic" value="Environmental"> Environmental</label>
+                <label><input type="checkbox" name="topic" value="Spiritual"> Spiritual</label>
+                <label><input type="checkbox" name="topic" value="Financial"> Financial</label>
+              </div>
+            </div>
           </div>
           <button type="submit">Subscribe</button>
         </form>
@@ -262,6 +261,14 @@
       // Update the text content of the span with the current year
       currentYearSpan.innerHTML = `&copy; ${currentYear.toString()} Fuller D&D`;
     </script>
+    <!-- ========== Start Swipe Navigation ========== -->
+
+<script>
+  
+</script>
+
+    <!-- ========== End Swipe Navigation ========== -->
+
   </footer>
 </body>
 

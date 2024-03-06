@@ -32,7 +32,6 @@
  }
 
  header,
- .carousel-container,
  footer {
    padding: 1rem;
    display: flex;
@@ -52,9 +51,11 @@
    position: relative;
    display: flex;
    justify-content: center;
-   align-items: center;
+   align-items: start;
+   padding: 1rem;
    height: 82dvh;
    background-color: var(--yellow);
+   overflow: hidden;
 
 
    .carousel {
@@ -71,33 +72,35 @@
      }
 
      #post-title {
-      width: 100%;
-      outline: 1pd solid;
+       width: 100%;
+       outline: 1pd solid;
        color: var(--red);
        font-size: 1.5rem;
        font-weight: bold;
        text-align: center;
      }
-     
+
      .carousel-slide {
        width: 100%;
        display: flex;
        justify-content: center;
        gap: 1rem;
        transition: transform 0.5s ease;
-       
+
        & h3 {
-        width: 100%;
-        font-size: 1.15rem;
-        text-align:left;
-        color: var(--red);
+         width: 100%;
+         font-size: 1.15rem;
+         line-height: 1/15;
+         text-align: left;
+         color: var(--red);
        }
+
        .slide-body {
          width: auto;
          flex: 1;
 
          p {
-           max-width: 44ch;
+           width: 100%;
          }
        }
      }
@@ -132,7 +135,7 @@
 
        .subscription-form input[type="email"],
        .subscription-form button {
-         margin: .6rem;
+         margin: .25rem;
          padding: .5rem 1rem;
          border: 1px solid var(--med-green);
          border-radius: .25rem;
@@ -150,6 +153,24 @@
          display: inline-block;
          /* Ensure labels and checkboxes stay together */
          margin-right: .6rem;
+       }
+
+       #options-heading {
+        display: inline-block; 
+        width: 100%; 
+        text-align: start;
+       }
+
+       #options-container {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .form-options {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap:.5rem;
        }
      }
    }
