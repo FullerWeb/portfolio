@@ -129,7 +129,7 @@
        .subscription-form {
          display: flex;
          flex-direction: column;
-         align-items: center;
+         
          text-wrap: balance;
        }
 
@@ -143,6 +143,7 @@
 
        .topics {
          margin-top: 1.25rem;
+         width: 100%;
        }
 
        .topics p {
@@ -152,7 +153,7 @@
        .topics label {
          display: inline-block;
          /* Ensure labels and checkboxes stay together */
-         margin-right: .6rem;
+         
        }
 
        #options-heading {
@@ -162,11 +163,14 @@
        }
 
        #options-container {
+     
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
       }
       
       .form-options {
+      
+        padding-inline:.25rem;
         display: flex;
         flex-direction: column;
         align-items: start;
