@@ -110,7 +110,7 @@ h2 {
   width: 100%;
   min-width: 16rem;
   max-width: 20rem;
-  height: 52rem;
+  height: 54rem;
   margin: 0 auto;
 
 }
@@ -119,7 +119,7 @@ h2 {
   /* Fixed width for the card */
   background-color: var(--blue);
   display: none;
-  height: 52rem;
+  height: 54rem;
 
 }
 
@@ -196,9 +196,15 @@ button {
 
 }
 
-#conclusion {
+#page-6-conclusion {
+  border: 1px solid whitesmoke;
   text-wrap: balance;
+  background-color: black;
+  color: whitesmoke;
 
+  & h1 {
+    width: 100%;
+  }
 }
 
 .disclaimer {
@@ -252,11 +258,7 @@ button {
   flex: 3;
 }
 
-.menu-toggle {
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
-}
+
 
 .navbar {
   display: flex;
@@ -301,6 +303,10 @@ button {
 
 }
 
+.menu-toggle {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -309,24 +315,27 @@ button {
     top: 3.6rem;
     left: 0;
     width: 100%;
-    z-index:1;
-    background-color: var(--white);
+    z-index: 999;
+    background-color: black;
     padding: 10px;
     text-align: center;
   }
 
   .nav-links li {
     margin: 10px 0;
+    color: var(--blue);
   }
 
   .menu-toggle {
     display: block;
     font-weight: 700;
     color: var(--blue);
+    cursor: pointer;
 
   }
 
   .active {
     display: flex;
+    color: var(--blue);
   }
 }
