@@ -112,6 +112,13 @@ img {
   background-color: var(--green);
   color: var(--cream);
 
+  #articles-intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
   .article-cards {
     display: flex;
     justify-content: center;
