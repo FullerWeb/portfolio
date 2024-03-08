@@ -398,6 +398,10 @@ img {
 
     }
 
+    & a {
+      color: whitesmoke;
+    }
+
     .active {
       display: flex;
       color: var(--blue);
