@@ -1,0 +1,308 @@
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+
+.articleHeader {
+  padding-inline: .25rem;
+}
+
+.articleHeader h3 {
+  color: whitesmoke;
+}
+
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+}
+
+#brand-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 400;
+  font-stretch: extra-expanded;
+  color: var(--blue);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1;
+  min-width: 15rem;
+  max-width: 20rem;
+  background-color: rgb(193, 193, 193);
+  color: black;
+  border-radius: .25rem;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.card .content {
+  padding: .5rem;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  min-width: 16rem;
+  max-width: 20rem;
+  height: 54rem;
+  margin: 0 auto;
+
+}
+
+.carousel .slide {
+  /* Fixed width for the card */
+  background-color: var(--blue);
+  display: none;
+  height: 54rem;
+
+}
+
+.carousel .slide.active {
+  display: block;
+}
+
+.carousel img {
+  width: 100%;
+  display: block;
+
+}
+
+.carousel .info {
+  background-color: var(--white);
+  padding: 10px;
+  color: black;
+}
+
+.carousel .prev,
+.carousel .next {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  background-color: rgba(188, 188, 188, 0.5);
+  color: var(--white);
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel .prev:hover,
+.carousel .next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel .prev {
+  left: 0;
+  border-radius: 0 .15rem 0;
+}
+
+.carousel .next {
+  right: 0;
+  border-radius: .25rem 0 0 .25rem;
+}
+
+.info {
+  color: black;
+}
+
+.info h3,
+.info h4,
+.info p {
+  margin: 0;
+}
+
+.info h3 {
+  padding-block: .25rem;
+  padding-inline: .125rem;
+}
+
+.info h4,
+.info p {
+  padding: .125rem;
+}
+
+button {
+  border: none;
+}
+
+#contact {
+  border: 2px soild var(--blue);
+  text-decoration: none;
+
+}
+
+#page-6-conclusion {
+  border: 1px solid whitesmoke;
+  text-wrap: balance;
+  background-color: black;
+  color: whitesmoke;
+
+  & h1 {
+    width: 100%;
+  }
+}
+
+.disclaimer {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  /* Adjust the width as needed */
+  max-width: 500px;
+  /* Limit the maximum width if desired */
+  padding: 20px;
+  background-color: var(--white);
+  color: black;
+  overflow-y: scroll;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  /* Apply transition for opacity and visibility */
+}
+
+.disclaimer button {
+  border-radius: .25rem;
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.disclaimer button:hover {
+  background-color: #0056b3;
+}
+
+#introduction {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#introImg {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: .25rem;
+  object-fit: contain;
+  flex: 1;
+}
+
+#introContent {
+  flex: 3;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  color: #fff;
+  padding: 10px;
+
+}
+
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 3.6rem;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background-color: black;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+      color: var(--blue);
+    }
+  
+    .menu-toggle {
+      display: block;
+      font-weight: 700;
+      color: var(--blue);
+      cursor: pointer;
+  
+    }
+  
+    .active {
+      display: flex;
+      color: var(--blue);
+    }
+  }
+  }

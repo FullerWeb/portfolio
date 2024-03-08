@@ -17,6 +17,28 @@
   <link rel="stylesheet" href="noncritical.css">
   <title>My Webpage</title>
   <style>
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        #brand-name {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-weight: 400;
+          font-stretch: extra-expanded;
+          color: var(--blue);
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+        }
+      }
+    }
+
     body {
       max-width: 71.25rem;
       margin: 0 auto;
@@ -31,19 +53,20 @@
     .container {
       width: 100%;
       margin-block: 1rem;
-      padding:1rem;
+      padding: 1rem;
       border-radius: .25rem;
     }
 
-    img {
-      border-radius: .25rem;
+    h1 {
+      font-size: 2.3rem;
+      font-family: 'Montserrat', sans-serif;
     }
 
     h2 {
       font-size: 1.25rem;
     }
 
-    h2 {
+    h3 {
       font-size: 1.15rem;
     }
 
@@ -59,7 +82,7 @@
 
       & h1 {
         color: whitesmoke;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
 
       }
 
@@ -79,7 +102,7 @@
         font-weight: bold;
       }
 
-      #brand {
+      #brand-hero {
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -92,156 +115,24 @@
       }
     }
 
+    p {
+      max-width: 75ch;
+    }
+
+
     #p2-intro {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       background-color: #dcd0b6;
       color: #006155;
       padding: .5rem;
 
-      #p2-img-1 {
-        float: left;
-      }
-
       #p2-img-2 {
-        float: right;
-        width: 100%;
         max-width: 14rem;
         height: auto;
-        aspect-ratio: 7/4;
-      }
-    }
-
-    #p3-articles {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      background-color: #006155;
-      color: #dcd0b6;
-    }
-
-    #p4-breeds-spotlight {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: .5rem;
-      gap: 2rem;
-      background-color: #dcd0b6;
-      color: #0e3d23;
-
-      #breeds-spotlight-intro {
-        & p {
-          max-width: 44ch;
-        }
-
-        #breeds-img-1 {
-          & img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1/1.4;
-          }
-
-        }
-      }
-
-      #advert {
-        border: 5px solid;
-        border-radius: .25rem;
-        padding: 2rem;
-
-        & p {
-          text-align: center;
-          text-wrap: balance;
-        }
-      }
-
-      #breeds-cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-
-        .breeds-card {
-          max-width: 22rem;
-
-          .breeds-img {
-            position: relative;
-
-            & img {
-              width: 100%;
-              height: auto;
-            }
-
-            & span {
-              position: absolute;
-              top: .5rem;
-              left: 0;
-              padding-inline: .5rem;
-              padding-block: .25rem;
-              border-radius: 0 .25rem .25rem 0;
-              background-color: rgba(0, 0, 0, 50%);
-              color: white;
-              font-weight: bold;
-            }
-          }
-        }
-      }
-    }
-
-    #p5-safety-check {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      background-color: #006155;
-      color: #dcd0b6;
-      padding-inline: .5rem;
-
-      #safety-tips-intro {
-        margin: 0 auto;
-
-        p {
-          max-width: 75ch;
-        }
-      }
-
-      #safety-tips {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-
-        .safety-tip-card {
-          max-width: 32rem;
-
-          & h3 {
-            padding-bottom: .25rem;
-          }
-
-          .safety-tip {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 1rem;
-
-            .tip-img {
-              flex: 1;
-
-              & img {
-                width: 100%;
-                height: auto;
-                border-radius: .25rem 0 0 .25rem;
-                aspect-ratio: 1/1;
-                object-position: center;
-              }
-            }
-
-            .tip-content {
-              flex: 2;
-
-              p {
-                text-wrap: balance;
-              }
-            }
-          }
-        }
+        aspect-ratio: 1.75/1;
       }
     }
   </style>
@@ -252,17 +143,17 @@
   <header id="header">
     <nav class="navbar">
       <div class="brand">
-        <img src="assets/brand.webp" width="36" height="33" alt="brand logo">
+        <img src="./assets/brand.webp" width="36" height="33" alt="brand logo">
         <div id="brand-name">
           <span>Pawsitive</span>
           <span>Paws</span>
         </div>
       </div>
-      <div class="menu-toggle">&#9776</div>
+      <div class="menu-toggle">&#9776;</div>
       <ul class="nav-links">
         <li><a href="#">About</a></li>
         <li><a href="#">Partners</a></li>
-        <li><a href="#">Affiliates</a></li>
+        <li><a href="#">The Wagging Chronicle</a></li>
         <li><a id="contact" href="#">Contact</a></li>
       </ul>
     </nav>
@@ -273,14 +164,14 @@
 
     </div>
     <h1>The Wagging Chronicle</h1>
-    <img id="hero-dog" src="assets/hero-dog.png" width="240" height="240" alt="Image of a golden retriever">
+    <img id="hero-dog" src="assets/hero-dog.webp" width="240" height="240" alt="Image of a golden retriever">
     <div id="mission">
       <h3>MISSION</h3>
       <p>"To foster a vibrant community where individual dog lovers unite, share their passion, and enrich the lives of
         canine
         companions through connection, education, and advocacy."</p>
     </div>
-    <div id="brand">
+    <div id="brand-hero">
       <img src="assets/brand.webp" alt="Pawsitive Paws Logo">
       <span>Pawsitive Paws</span>
     </div>
@@ -289,30 +180,34 @@
   <div id="p2-intro" class="container">
     <img id="p2-img-1" src="assets/playful-puppy-maltipoo-dog-running-toward-camera.webp" width="120" height="158"
       alt="Playful puppy maltipoo dog running toward camera.">
-    <p style="padding-bottom: 0;">
-      <strong>W</strong>elcome, dog lovers, to the inaugural edition of <i>The Wagging Chronicle</i>! We're thrilled to
-      embark on this journey with you as we explore the wonderful world of dog walking and all the joys it brings to
-      both our furry friends and ourselves.
-    </p>
-    <p>
-      In this newsletter, we'll be delving into everything from the myriad benefits of daily dog walks to expert tips
-      for ensuring safe and enjoyable outings with your canine companions. Whether you're a seasoned dog owner or a new
-      pup parent looking to enhance your walking routine, <i>The Wagging Chronicle</i> is your go-to resource for all
-      things related to canine
-      exercise and exploration.
-    </p>
+    <div>
+      <p>
+        Welcome, dog lovers, to the inaugural edition of <i>The Wagging Chronicle</i>! We're thrilled
+        to
+        embark on this journey with you as we explore the wonderful world of dog walking and all the joys it brings to
+        both our furry friends and ourselves.
+      </p>
+      <p>
+        In this newsletter, we'll be delving into everything from the myriad benefits of daily dog walks to expert tips
+        for ensuring safe and enjoyable outings with your canine companions. Whether you're a seasoned dog owner or a
+        new
+        pup parent looking to enhance your walking routine, <i>The Wagging Chronicle</i> is your go-to resource for all
+        things related to canine
+        exercise and exploration.
+      <p>
+        So, leash up your pups, lace up your walking shoes, and join us as we celebrate the simple pleasure of a
+        stroll
+        with our
+        four-legged pals. Let's make every walk an adventure to remember!
+      </p>
+      </p>
+    </div>
     <img id="p2-img-2" src="assets/group-of-puppies.webp" width="340" height="190" alt="Group of puppies">
-    <p>
-      So, leash up your pups, lace up your walking shoes, and join us as we celebrate the simple pleasure of a
-      stroll
-      with our
-      four-legged pals. Let's make every walk an adventure to remember!
-    </p>
   </div>
   <div id="p3-articles" class="container">
     <div>
       <h2>Featured Articles</h2>
-      <p>
+      <p style="padding-bottom: 1rem;">
         Walking with our canine companions isn't just about getting from point A to point B—it's an essential activity
         that
         brings a multitude of benefits to both dogs and their human companions. In this article, we'll explore the
@@ -322,8 +217,8 @@
         you and your furry friend.
       </p>
     </div>
-    <div class="cards">
-      <article class="card" id="article1">
+    <div class="article-cards">
+      <article class="article-card" id="article1">
         <div class="article-header">
           <h3>Physical Health Benefits</h3>
         </div>
@@ -340,7 +235,7 @@
 
         </div>
       </article>
-      <article class="card" id="article2">
+      <article class="article-card" id="article2">
         <div class="article-header">
           <h3>Mental Health Benefits</h3>
         </div>
@@ -359,7 +254,7 @@
           </p>
         </div>
       </article>
-      <article class="card" id="article3">
+      <article class="article-card" id="article3">
         <div class="article-header">
           <h3>Socialization Benefits</h3>
         </div>
@@ -376,7 +271,6 @@
       </article>
     </div>
   </div>
-
   <div id="p4-breeds-spotlight" class="container">
     <div id="breeds-spotlight-intro">
       <h2>
@@ -398,7 +292,6 @@
           are some breeds known for their love of walking and their ability to keep pace with even the most active of
           owners.</p>
       </div>
-      </p>
     </div>
 
     <div id="advert">
@@ -416,7 +309,7 @@
     <div id="breeds-cards">
       <div class="breeds-card">
         <div class="breeds-img">
-          <img src="assets/golden-retreiver.webp" alt="Golden Labrador Retreiver" width="300" height="225" alt="">
+          <img src="assets/golden-retreiver.webp" alt="Golden Labrador Retreiver" width="300" height="225">
           <span>Labrador Retreiver</span>
         </div>
         <div class="breeds-card-content">
@@ -483,26 +376,29 @@
     </div>
 
   </div>
-  <div id="p5-safety-check">
+  <div id="p5-safety-check" class="container">
     <div id="safety-tips-intro" class="container">
-      <h2>&#10004; Health Check: <br> 8 Tips for Preventing Injuries During Walks</h2>
-      <p>Ensuring the safety and well-being of your furry friend during walks goes beyond using the
-        right gear and
-        following
-        proper walking etiquette. It also involves taking proactive steps to prevent common injuries that can occur
-        while out
-        and about. Here are some essential tips to help keep your dog safe and injury-free during walks.</p>
-      <p>
-        By following these tips and being proactive about injury prevention, you can help ensure that every walk is
-        a
-        safe and
-        enjoyable experience for you and your canine companion. Remember to listen to your dog's cues, respect their
-        physical
-        limitations, and prioritize their well-being above all else. With proper care and attention, you can
-        minimize
-        the risk
-        of injuries and make each walk a positive and enriching experience for both of you.
-      </p>
+      <h2>&#10004; Health Check: 8 Tips for Preventing Injuries During Walks</h2>
+      <div>
+        <p>Ensuring the safety and well-being of your furry friend during walks goes beyond using the
+          right gear and
+          following
+          proper walking etiquette. It also involves taking proactive steps to prevent common injuries that can occur
+          while out
+          and about. Here are some essential tips to help keep your dog safe and injury-free during walks.</p>
+        <p>
+          By following these tips and being proactive about injury prevention, you can help ensure that every walk is
+          a
+          safe and
+          enjoyable experience for you and your canine companion. Remember to listen to your dog's cues, respect their
+          physical
+          limitations, and prioritize their well-being above all else. With proper care and attention, you can
+          minimize
+          the risk
+          of injuries and make each walk a positive and enriching experience for both of you.
+        </p>
+      </div>
+      <img src="assets/vet visit.webp" width="400" height="184" alt="Vet visit for dog.">
     </div>
     <div id="safety-tips">
       <div class="safety-tip-card">
@@ -547,8 +443,7 @@
         <div class="safety-tip">
           <div class="tip-img">
             <img id="safety-tips-img-3" src="assets/person-displaying-properly-walking-dog-with-leash.webp" width="100"
-              width="
-                  100" alt="">
+              alt="Person displaying properly walking dog with leash.">
           </div>
           <div class="tip-content">
             <p>
@@ -566,7 +461,7 @@
         <h3>Monitor for Signs of Injury</h3>
         <div class="safety-tip">
           <div class="tip-img">
-            <img id="safety-tips-img-6" src="assets/limping-dog.webp" width="100" alt="100">
+            <img id="safety-tips-img-4" src="assets/limping-dog.webp" width="100" alt="100">
           </div>
           <div class="tip-content">
             <p>
@@ -587,7 +482,7 @@
         </h3>
         <div class="safety-tip">
           <div class="tip-img">
-            <img id="safety-tips-img-6" src="assets/dog-panting.webp" width="100" alt="100">
+            <img id="safety-tips-img-5" src="assets/dog-panting.webp" width="100" alt="100">
           </div>
           <div class="tip-content">
             <p>
@@ -643,7 +538,7 @@
         </h3>
         <div class="safety-tip">
           <div class="tip-img">
-            <img id="safety-tips-img-7" src="assets/dog-on-top-of-hill.webp" width="100" height="100" alt="">
+            <img id="safety-tips-img-8" src="assets/dog-on-top-of-hill.webp" width="100" height="100" alt="">
           </div>
           <div class="tip-content">
             <p>
@@ -661,7 +556,6 @@
 
 
     </div>
-
   </div>
   <div id="page-6-conclusion" class="container">
     <h2>Lapping Up</h2>
