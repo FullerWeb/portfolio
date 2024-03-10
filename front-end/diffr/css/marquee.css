@@ -1,0 +1,48 @@
+    :root {
+      --marquee-gap: 2rem;
+    }
+
+    .marquee-wrapper {
+      width: 100%;
+      background: #5046E51A;
+    }
+
+    #marquee-container {
+      margin-top: 4rem;
+      display: flex;
+      overflow: hidden;
+      height: 14rem;
+      gap: var(--marquee-gap);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      position: relative;
+      /* Add position relative */
+
+      /* Adjust positioning to create the desired visible area */
+      left: 9.75rem;
+      /* Adjust as per your requirement */
+      width: calc(100% - 19.5rem);
+      /* Adjust as per your requirement */
+    }
+
+    .marquee-group {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: var(--marquee-gap);
+      min-width: 100%;
+      animation: scroll 22s linear infinite;
+    }
+
+
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(calc(-100% - var(--marquee-gap)));
+      }
+    }
