@@ -4,97 +4,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
   <meta name="description"
     content="Fuller Design and Development offers comprehensive Web Design and Development services alongside expert Content Writing solutions. Elevate your online presence with tailored designs and compelling content.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/marquee.css">
   <title>Fuller D&D | Portfolio</title>
 </head>
 
 <body>
-  <!-- ========== Start Header ========== -->
   <header>
     <div id="left-nav">
-      <div class="brand">
-        <img src="assets/brands/diffr-logo.webp" alt="logo">
-      </div>
-      <div class="nav-dropdowns">
-        <!-- Dropdown -->
-        <div class="nav-dropdown">
-          <span>Find Jobs</span> <!-- Phrase -->
-          <img src="assets/icons/dropdown-icon.webp" width="20" height="20" alt=""> <!-- Image arrow -->
-          <div class="nav-dropdown-content">
-            <a href="#">Option 1</a>
-            <a href="#">Option 2</a>
-            <a href="#">Option 3</a>
-          </div>
-        </div>
-        <div class="nav-dropdown">
-          <span>Find Candidates</span> <!-- Phrase -->
-          <img src="assets/icons/dropdown-icon.webp" width="20" height="20" alt=""> <!-- Image arrow -->
-          <div class="nav-dropdown-content">
-            <a href="#">Option 1</a>
-            <a href="#">Option 2</a>
-            <a href="#">Option 3</a>
-          </div>
-        </div>
-
+      <img id="nav-brand" srcset="assets/brands/diffr-logo-2X.webp 2x" src="assets/brands/diffr-logo-1X.webp "
+        width="48" height="20" alt="diffr Logo">
+      <div id="nav-selects">
+        <select name="" id="">
+          <option value="">Find Jobs</option>
+          <option value="">Option 1</option>
+          <option value="">Option 2</option>
+          <option value="">Option 3</option>
+        </select>
+        <select name="" id="">
+          <option value="">Find Candidates</option>
+          <option value="">Option 1</option>
+          <option value="">Option 2</option>
+          <option value="">Option 3</option>
+        </select>
       </div>
     </div>
+    <div class="menu-icon">&#9776;</div>
     <div id="right-nav">
+      <button>Sign up free</button>
+      <span>Employee Login</span>
+    </div>
+  </header>
+  <div class="menu">
+    <div id="top-menu">
+      <img id="nav-brand" src="" data-src="assets/brands/diffr-logo-72X30.webp" class="lazyload" width="48" height="20"
+        alt="">
+      <select name="" id="">
+        <option value="">Find Jobs</option>
+        <option value="">Option 2</option>
+      </select>
+      <select name="" id="">
+        <option value="">Find Candidates</option>
+        <option value="">Option 2</option>
+      </select>
+    </div>
+    <div id="bottom-menu">
       <button>
         Sign up free
       </button>
       <span id="login">Employee Login</span>
     </div>
-  </header>
-
-  <!-- ========== End Header ========== -->
-  <!-- ========== Start Hero ========== -->
-  <!-- ========== Start Left Hero ========== -->
-  <div id="hero-container" class="container">
-    <div id="left-hero">
-      <h1 id="hero-heading">
-        Find your next Job in
-        <span class="letter-boxed">Media</span>,
-        <span class="letter-boxed">Film</span>,
-        <span class="letter-boxed">Events</span>, and
-        <span class="letter-boxed">Advertising</span>
-      </h1>
-      <div class="cta-span">
-        <img src="assets/icons/sign-up.webp" alt="">
-        <span>Sign up free and create your portfolio.</span>
-      </div>
-      <div class="cta-span">
-        <img src="assets/icons/business_center.webp" alt="">
-        <span>Apply to jobs that match your profile.</span>
-      </div>
-      <div class="cta-span">
-        <img src="assets/icons/share.webp" alt="">
-        <span>Share your work in Community.</span>
-      </div>
-      <button>
-        Find Jobs Now
-      </button>
-    </div>
-
-
-    <!-- ========== End Left Hero ========== -->
-    <!-- ========== Start Right Hero ========== -->
-    <div id="right-hero">
-      <img src="assets/views/desktop-view-1.webp" width="551" height="427" alt="Job Board">
-    </div>
-
-    <!-- ========== End Right Hero ========== -->
-
   </div>
-  <!-- ========== End Hwro ========== -->
-  <!-- ========== Start Logos ========== -->
+  <div id="hero" class="container">
+    <div id="left-hero" class="box">
+      <h1 id="hero-heading">
+        <span id="phrase-1">Find your next Job in
+          <span class="letter-boxed">Media</span>,</span>
+        <span class="letter-boxed">Film</span>,
+        <span class="letter-boxed">Events</span>, <span id="phrase-2">
+          and <span class="letter-boxed">Advertising</span>
+        </span>
+
+      </h1>
+      <div class="cta-container">
+        <div class="cta">
+          <img src="assets/icons/sign-up.webp" width="32" height="32" alt="icon" />
+          <span>Sign up free and create your portfolio.</span>
+        </div>
+        <div class="cta">
+          <img src="assets/icons/business_center.webp" width="32" height="32" alt="icon" />
+          <span>Apply to jobs that match your profile.</span>
+        </div>
+        <div class="cta">
+          <img src="assets/icons/share.webp" width="32" height="32" alt="icon" />
+          <span>Share your work in Community.</span>
+        </div>
+      </div>
+      <button class="btn-default">Find Jobs Now</button>
+    </div>
+    <div id="right-hero" class="box">
+      <img src="assets/views/desktop-view-1-552w.webp" width="552" height="428" alt="Image of job board in application"
+        srcset="assets/views/desktop-view-1-1104w.webp 2x" />
+    </div>
+  </div>
   <div class="marquee-wrapper">
     <div id="marquee-container">
       <div class="marquee-group">
@@ -115,278 +111,412 @@
       </div>
     </div>
   </div>
-  <!-- ========== End Logos ========== -->
-  <!-- ========== Start Benefits 1 ========== -->
-
-  <div id="benefits-1" class="container">
-    <div id="b1-img-container">
-      <img src="assets/views/benefits-1-img.webp" width="452" height="365" alt="User profile page">
+  <div id="work-details" class="container">
+    <div id="left-work-details" class="box">
+      <img src="" data-src="assets/views/benefits-1-img.webp" class="lazyload" width="552" height="446"
+        alt="Image of user profle view in application">
     </div>
-    <div id="b1-benefits">
-      <h2>
-        All work details in 1 Single Page.
-      </h2>
-      <p>
-        Join 40k+ candidates using Diffr to create their portfolio. Upload all your work from Drive, YouTube, Instagram,
-        Behance
-        and more. So all your work at one place. One link to share
-      </p>
-      <div style="display: flex; flex-direction: column; gap: 25px;">
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="assets/icons/add-content.webp" width="32" height="32" alt="Add content icon">
-          <span
-            style=" font-family: Mulish; font-size: 18px; font-weight: 400; line-height: 32px; letter-spacing: 0em; text-align: left;">
-            Add your media, images, documents and links
-          </span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="assets/icons/visibility.webp" width="32" height="32" alt="Increase visability icon">
-          <span
-            style=" font-family: Mulish; font-size: 18px; font-weight: 400; line-height: 32px; letter-spacing: 0em; text-align: left;">
-            Improve Visibility to Employers
-          </span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="assets/icons/get-selected.webp" width="32" height="32" alt="Increase getting selected icon">
-          <span
-            style=" font-family: Mulish; font-size: 18px; font-weight: 400; line-height: 32px; letter-spacing: 0em; text-align: left;">
-            Increase your chance to get selected
-          </span>
+    <div id="right-work-details" class="box">
+      <div class="features-content">
+        <h2>
+          All work details in 1 Single Page.
+        </h2>
+        <p>
+          Join 40k+ candidates using diffr to create their portfolio. Upload all your work from Drive, YouTube,
+          Instagram,
+          Behance
+          and more. So all your work at one place. One link to share
+        </p>
+        <div class="cta-container">
+          <div class="cta">
+            <img src="" data-src="assets/icons/add-content.webp" class="lazyload" width="32" height="32" alt="icon" />
+            <span>Add your media, images, documents and links</span>
+          </div>
+          <div class="cta">
+            <img sr="" data-src="assets/icons/visibility.webp" class="lazyload" width="32" height="32" alt="icon" />
+            <span>Improve Visibility to Employers</span>
+          </div>
+          <div class="cta">
+            <img src="" data-src="assets/icons/get-selected.webp" class="lazyload" width="32" height="32" alt="icon" />
+            <span>Increase your chance to get selected</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- ========== End Benefits 1 ========== -->
-  <!-- ========== Start Mobile download ========== -->
-
-  <div id="mobile-view" class="container">
-    <div id="mobile-download">
-      <div id="md-content">
-        <p>diffr MOBILE</p>
-        <p style="font-style: 1.5rem; font-weight:600;">Build, publish your profile and apply on multiple jobs</p>
-        <div class="app-stores">
-          <img src="assets/brands/google-app-store.webp" alt="Google Play icon">
-          <img src="assets/brands/apple-store.webp" alt="Apple App Store Icon">
+  <div id="dl-mobile">
+    <img src="" data-src="assets/views/mobile-download-1312w.webp" class="lazyload" width="1312" height="331"
+      alt="Advert for mobile download" />
+  </div>
+  <div id="hire-candidates" class="container">
+    <div id="left-hire-candidates" class="box">
+      <div class="features-content">
+        <h2>
+          Hire candidates fast
+        </h2>
+        <div class="cta-container">
+          <div class="cta">
+            <img src="" data-src="assets/icons/circle-check-mark.webp" class="lazyload" width="32" height="32"
+              alt="icon" />
+            <span>For full time, part time, or freelance positions</span>
+          </div>
+          <div class="cta">
+            <img src="" data-src="assets/icons/circle-check-mark.webp" class="lazyload" width="32" height="32"
+              alt="icon" />
+            <span>Search and hire your creative candidate</span>
+          </div>
         </div>
       </div>
-      <img id="mobiles" src="assets/views/mobile-view.webp" alt="">
+      <button class="btn-default">Post job now</button>
+    </div>
+    <div id="right-hire-candidates" class="box">
+      <img src="assets/views/candidates.webp" width="552" height="376" alt="Image of candidates board in application">
     </div>
   </div>
-
-  <!-- ========== End Mobile download ========== -->
-
-  <!-- ========== Start Candidates View ========== -->
-  <div id="candidates-view" class="container">
-    <div id="cv-content">
-      <h2>
-        Hire candidates fast
-      </h2>
-      <p>
-        Praesent varius risus nec rutrum gravida. Suspendisse nec sem sollicitudin nibh consectetur
-      </p>
-      <div style="display: flex; flex-direction: column; gap: 25px;">
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="assets/icons/add-content.webp" width="32" height="32" alt="Add content icon">
-          <span
-            style=" font-family: Mulish; font-size: 18px; font-weight: 400; line-height: 32px; letter-spacing: 0em; text-align: left;">
-            Create Mulitple Profiles
-          </span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="assets/icons/visibility.webp" width="32" height="32" alt="Increase visability icon">
-          <span
-            style=" font-family: Mulish; font-size: 18px; font-weight: 400; line-height: 32px; letter-spacing: 0em; text-align: left;">
-            Improve Visibility to Employers </span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="assets/icons/get-selected.webp" width="32" height="32" alt="Increase getting selected icon">
-          <span
-            style=" font-family: Mulish; font-size: 18px; font-weight: 400; line-height: 32px; letter-spacing: 0em; text-align: left;">
-            Search and Explore Job Opportunity </span>
-        </div>
-        <div id="post-now">
-          <span>Post job now</span>
-          <img src="assets/icons/Errow.webp" width="20" height="8" alt="">
-        </div>
-      </div>
-    </div>
-    <div id="candidate-img-container">
-      <img src="assets/views/candidates.webp" width="542" height="400" alt="Job Candidates Page">
-    </div>
-  </div>
-  <!-- ========== End Candidates View ========== -->
-  <!-- ========== Start Top Profiles View ========== -->
-
-  <div id="top-profiles" class="container">
-    <div class="headline">
-      <h2>Top Profiles </h2>
+  <div id="profiles" class="container">
+    <div class="section-header">
+      <h2>Top Profiles</h2>
       <div class="view-all">
-        <span>View All</span><span class="rarrow">&#8594;</span>
+        <span>View All</span><span>&rarr;</span>
       </div>
     </div>
-    <div class="profile-cards">
+    <div id="profile-cards">
       <div class="profile-card">
         <div class="profile-img-wrapper">
-          <p class="pill">Actor</p>
-          <img src="assets/profiles/anuj.webp" width="265" height="265" alt="Image of Anuj Nandi">
+          <img src="" data-src="assets/profiles/anuj.webp" class="lazyload" width="264" height="264"
+            alt="Image of Anuj Nandi">
+          <span class="badge">Actor</span>
         </div>
-        <div class="card-body">
+        <div class="profile-card-body">
           <h3>Anuj Nandi</h3>
           <span class="locale">Bangalore</span>
         </div>
       </div>
-
       <div class="profile-card">
         <div class="profile-img-wrapper">
-          <p class="pill">Model</p>
-          <img src="assets/profiles/riya.webp" width="265" height="265" alt="Riya Keshwani">
+          <p class="badge">Model</p>
+          <img src="" data-src="assets/profiles/riya.webp" class="lazyload" width="264" height="264"
+            alt="Riya Keshwani">
         </div>
-        <div class="card-body">
+        <div class="profile-card-body">
           <h3>Riya Keshwani</h3>
           <span class="locale">Bangalore</span>
         </div>
       </div>
-
       <div class="profile-card">
         <div class="profile-img-wrapper">
-          <p class="pill">Content Writer</p>
-          <img src="assets/profiles/shivnandra.webp" width="265" height="265" alt="Shivananda Mukharji">
+          <p class="badge">Content Writer</p>
+          <img src="" data-src="assets/profiles/shivnandra.webp" class="lazyload" width="264" height="264"
+            alt="Shivananda Mukharji">
         </div>
-        <div class="card-body">
+        <div class="profile-card-body">
           <h3>Shivnanda Mukharji</h3>
           <span class="locale">Bangalore</span>
         </div>
       </div>
-
       <div class="profile-card">
         <div class="profile-img-wrapper">
-          <p class="pill">Influencer</p>
-          <img src="assets/profiles/shapriya.webp" width="265" height="265" alt="Supriya Agarwal">
+          <p class="badge">Influencer</p>
+          <img src="" data-src="assets/profiles/shapriya.webp" class="lazyload" width="264" height="264"
+            alt="Shivananda Mukharji">
         </div>
-        <div class="card-body">
-          <h3>Supriya Agarwal</h3>
+        <div class="profile-card-body">
+          <h3>Shivnanda Mukharji</h3>
           <span class="locale">Bangalore</span>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- ========== End Top Profiles View ========== -->
-  <!-- ========== Start Big CTA ========== -->
-  <div class="container">
-    <div id="big-cta">
-      <h2>Be a part of the biggest creative community</h2>
-      <button>Get Started</button>
+  <div class="profiles-swiper-container container swiper-container">
+    <div class="section-header">
+      <h2>Top Profiles</h2>
+      <div class="view-all view-all-lg">
+        <span>View All</span><span>&rarr;</span>
+      </div>
+    </div>
+    <div class="swiper-wrapper profiles-wrapper">
+      <div class="swiper-slide profile-wrapper">
+        <div class="profile-card">
+          <div class="profile-img-wrapper">
+            <img src="" data-src="assets/profiles/anuj.webp" class="lazyload" width="264" height="264"
+              alt="Image of Anuj Nandi">
+            <span class="badge">Actor</span>
+          </div>
+          <div class="profile-card-body">
+            <h3>Anuj Nandi</h3>
+            <span class="locale">Bangalore</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide profile-wrapper">
+        <div class="profile-card">
+          <div class="profile-img-wrapper">
+            <p class="badge">Model</p>
+            <img src="" data-src="assets/profiles/riya.webp" class="lazyload" width="264" height="264"
+              alt="Riya Keshwani">
+          </div>
+          <div class="profile-card-body">
+            <h3>Riya Keshwani</h3>
+            <span class="locale">Bangalore</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide profile-wrapper">
+        <div class="profile-card">
+          <div class="profile-img-wrapper">
+            <p class="badge">Content Writer</p>
+            <img src="" data-src="assets/profiles/shivnandra.webp" class="lazyload" width="264" height="264"
+              alt="Shivananda Mukharji">
+          </div>
+          <div class="profile-card-body">
+            <h3>Shivnanda Mukharji</h3>
+            <span class="locale">Bangalore</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide profile-wrapper">
+        <div class="profile-card">
+          <div class="profile-img-wrapper">
+            <p class="badge">Influencer</p>
+            <img src="" data-src="assets/profiles/shapriya.webp" class="lazyload" width="264" height="264"
+              alt="Shivananda Mukharji">
+          </div>
+          <div class="proflie-card-body">
+            <h3>Shivnanda Mukharji</h3>
+            <span class="locale">Bangalore</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide profile-wrapper">
+        <div class="profile-card">
+          <div class="profile-img-wrapper">
+            <img src="" data-src="assets/profiles/anuj.webp" class="lazyload" width="264" height="264"
+              alt="Image of Anuj Nandi">
+            <span class="badge">Actor</span>
+          </div>
+          <div class="profile-card-body">
+            <h3>Anuj Nandi</h3>
+            <span class="locale">Bangalore</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide profile-wrapper">
+        <div class="profile-card">
+          <div class="profile-img-wrapper">
+            <p class="badge">Model</p>
+            <img src="" data-src="assets/profiles/riya.webp" class="lazyload" width="264" height="264"
+              alt="Riya Keshwani">
+          </div>
+          <div class="profile-card-body">
+            <h3>Riya Keshwani</h3>
+            <span class="locale">Bangalore</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide profile-wrapper">
+        <div class="profile-card">
+          <div class="profile-img-wrapper">
+            <p class="badge">Content Writer</p>
+            <img src="" data-src="assets/profiles/shivnandra.webp" class="lazyload" width="264" height="264"
+              alt="Shivananda Mukharji">
+          </div>
+          <div class="profile-card-body">
+            <h3>Shivnanda Mukharji</h3>
+            <span class="locale">Bangalore</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide profile-wrapper">
+        <div class="profile-card">
+          <div class="profile-img-wrapper">
+            <p class="badge">Influencer</p>
+            <img src="" data-src="assets/profiles/shapriya.webp" class="lazyload" width="264" height="264"
+              alt="Shivananda Mukharji">
+          </div>
+          <div class="proflie-card-body">
+            <h3>Shivnanda Mukharji</h3>
+            <span class="locale">Bangalore</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="view-all view-all-sm">
+      <span>View All</span><span>&rarr;</span>
     </div>
   </div>
-  <!-- ========== End Big CTA ========== -->
-  <!-- ========== Start Events ========== -->
+  <div id="big-cta" class="container">
+    <p>Be a part of the biggest creative community</p>
+    <button class="btn-default">Get Started</button>
+  </div>
   <div id="events" class="container">
-    <div class="headline">
+    <div class="section-header">
       <h2>Events</h2>
       <div class="view-all">
-        <span>View All</span><span class="rarrow">&#8594;</span>
+        <span>View All</span><span>&rarr;</span>
       </div>
     </div>
-    <div class="profile-cards">
-      <div class="profile-card">
-        <div class="profile-img-wrapper">
-          <p class="pill">Actor</p>
-          <img src="assets/events/events-1.webp" width="265" height="195" alt="Event">
-        </div>
-        <div class="card-body">
+    <div id="events-cards">
+      <div class="event-card">
+        <img src="" data-src="assets/events/events-1.webp" class="lazyload" width="264" height="195" alt="Event">
+        <div class="event-card-body">
           <h3>Insta Influencer What A Shot!, Prod...</h3>
-          <span class="locale">18 Jan 2022</span>
+          <span class="date">18 Jan 2022</span>
         </div>
       </div>
-
-      <div class="profile-card">
-        <div class="profile-img-wrapper">
-          <p class="pill">Model</p>
-          <img src="assets/events/events-2.webp" width="265" height="195" alt="Event">
+      <div class="event-card">
+        <div class="event-img-wrapper">
+          <img src="" data-src="assets/events/events-2.webp" class="lazyload" width="264" height="195" alt="Event">
         </div>
-        <div class="card-body">
+        <div class="event-card-body">
           <h3>Insta Influencer What A Shot!, Prod...</h3>
-          <span class="locale">18 Jan 2022</span>
+          <span class="date">18 Jan 2022</span>
         </div>
       </div>
-
-      <div class="profile-card">
-        <div class="profile-img-wrapper">
-          <p class="pill">Model</p>
-          <img src="assets/events/events-3.webp" width="265" height="195" alt="Event">
-        </div>
-        <div class="card-body">
+      <div class="event-card">
+        <img src="" data-src="assets/events/events-3.webp" class="lazyload" width="264" height="195" alt="Event">
+        <div class="event-card-body">
           <h3>Insta Influencer What A Shot!, Prod...</h3>
-          <span class="locale">18 Jan 2022</span>
+          <span class="date">18 Jan 2022</span>
         </div>
       </div>
-
-      <div class="profile-card">
-        <div class="profile-img-wrapper">
-          <p class="pill">Model</p>
-          <img src="assets/events/events-4.webp" width="265" height="195" alt="Event">
-        </div>
-        <div class="card-body">
+      <div class="event-card">
+        <img src="" data-src="assets/events/events-4.webp" class="lazyload" width="264" height="195" alt="Event">
+        <div class="event-card-body">
           <h3>Insta Influencer What A Shot!, Prod...</h3>
           <span class="locale">18 Jan 2022</span>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- ========== End Events ========== -->
-  <!-- ========== Start Testimonials ========== -->
-  <div id="testimony" class="container">
-    <div class="test-headline">
-      <h2>Talk Of The Town</h2>
-      <p>Donec eget faucibus urna. Ut volutpat mi lacus, sed sodales mi laoreet eu.</p>
+  <div class="events-swiper-container container swiper-container">
+    <div class="section-header">
+      <h2>Events</h2>
+      <div class="view-all view-all-lg">
+        <span>View All</span><span>&rarr;</span>
+      </div>
     </div>
-    <div class="testimony-cards">
-      <div class="testimony-card">
-        <div class="test-date">26 June 2022</div>
-        <div class="test-content">
-          <p>
-            Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.
-          </p>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide events-wrapper">
+        <div class="event-card">
+          <img src="" data-src="assets/events/events-1.webp" class="lazyload" width="264" height="195" alt="Event">
+          <div class="event-card-body">
+            <h3>Insta Influencer What A Shot!, Prod...</h3>
+            <span class="date">18 Jan 2022</span>
+          </div>
         </div>
-        <span class="rarrow">&#8594;</span>
       </div>
-      <div class="testimony-card">
-        <div class="test-date">26 June 2022</div>
-        <div class="test-content">
-          <p>
-            Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.
-          </p>
+      <div class="swiper-slide events-wrapper">
+        <div class="event-card">
+          <div class="event-img-wrapper">
+            <img src="" data-src="assets/events/events-2.webp" class="lazyload" width="264" height="195" alt="Event">
+          </div>
+          <div class="card-body">
+            <h3>Insta Influencer What A Shot!, Prod...</h3>
+            <span class="date">18 Jan 2022</span>
+          </div>
         </div>
-        <span class="rarrow">&#8594;</span>
       </div>
-      <div class="testimony-card">
-        <div class="test-date">26 June 2022</div>
-        <div class="test-content">
-          <p>
-            Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.
-          </p>
+      <div class="swiper-slide events-wrapper">
+        <div class="event-card">
+          <img src="" data-src="assets/events/events-3.webp" class="lazyload" width="264" height="195" alt="Event">
+          <div class="card-body">
+            <h3>Insta Influencer What A Shot!, Prod...</h3>
+            <span class="date">18 Jan 2022</span>
+          </div>
         </div>
-        <span class="rarrow">&#8594;</span>
       </div>
-      <div class="testimony-card">
-        <div class="test-date">26 June 2022</div>
-        <div class="test-content">
-          <p>
-            Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.
-          </p>
+      <div class="swiper-slide events-wrapper">
+        <div class="event-card">
+          <img src="" data-src="assets/events/events-4.webp" class="lazyload" width="264" height="195" alt="Event">
+          <div class="card-body">
+            <h3>Insta Influencer What A Shot!, Prod...</h3>
+            <span class="locale">18 Jan 2022</span>
+          </div>
         </div>
-        <span class="rarrow">&#8594;</span>
       </div>
-
     </div>
-
+    <div class="view-all view-all-sm">
+      <span>View All</span><span>&rarr;</span>
+    </div>
   </div>
-
-  <!-- ========== End Testimonials ========== -->
-  <!-- ========== Start Footer ========== -->
+  <div id="talks" class="container">
+    <div class="section-header">
+      <h2>Talk of the Town</h2>
+      <p>Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.</p>
+      <div class="view-all">
+        <span>View Al l</span><span>&rarr;</span>
+      </div>
+    </div>
+    <div id="talks-cards">
+      <div class="talk-card">
+        <div class="talk-card-body">
+          <span class="date">18 Jan 2022</span>
+          <p>Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.</p>
+        </div>
+      </div>
+      <div class="talk-card">
+        <div class="talk-card-body">
+          <span class="date">18 Jan 2022</span>
+          <p>Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.</p>
+        </div>
+      </div>
+      <div class="talk-card">
+        <div class="talk-card-body">
+          <span class="date">18 Jan 2022</span>
+          <p>Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.</p>
+        </div>
+      </div>
+      <div class="talk-card">
+        <div class="talk-card-body">
+          <span class="date">18 Jan 2022</span>
+          <p>Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="talks-swiper-container container swiper-container">
+    <div class="section-header">
+      <h2>Talk of the Town</h2>
+      <p>Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.</p>
+    </div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide talks-wrapper">
+        <div class="talk-card">
+          <div class="talk-card-body">
+            <span class="date">18 Jan 2022</span>
+            <p>Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide talks-wrapper">
+        <div class="talk-card">
+          <div class="talk-card-body">
+            <span class="date">18 Jan 2022</span>
+            <p>Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide talks-wrapper">
+        <div class="talk-card">
+          <div class="talk-card-body">
+            <span class="date">18 Jan 2022</span>
+            <p>Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide talks-wrapper">
+        <div class="talk-card">
+          <div class="talk-card-body">
+            <span class="date">18 Jan 2022</span>
+            <p>Donec mauris sapien, vulputate et molestie vitae, rutrum at nunc.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="view-all view-all-sm">
+      <span>View All</span><span>&rarr;</span>
+    </div>
+  </div>
   <footer>
     <div id="footer-top">
       <div id="footer-left">
@@ -407,7 +537,6 @@
             </li>
           </ul>
         </div>
-
         <div id="support">
           <h3>Support</h3>
           <ul>
@@ -419,7 +548,6 @@
             </li>
           </ul>
         </div>
-
       </div>
       <div id="footer-right">
         <div id="follow-us">
@@ -433,26 +561,121 @@
           </div>
         </div>
         <div class="app-stores">
-          <img src="assets/brands/google-app-store.webp" alt="Google Play Store Logo">
-          <img src="assets/brands/apple-store.webp" alt="Apple App Store Logo">
+          <img src="assets/brands/google-app-store.webp" width="92" height="29" alt="Google Play Store Logo">
+          <img src="assets/brands/apple-store.webp" width="92" height="29" alt="Apple App Store Logo">
         </div>
       </div>
     </div>
     <div id="footer-bottom">
       <div id="footer-bottom-left">
-        <span>
+        <p>
           Copyright © 2023 VihaTech Software Solutions Pvt. Ltd.
-        </span>
+        </p>
       </div>
-      <div id="footer-bottom-right">
-        <span>Terms of Use</span>
+      <div id="footer-bottom-right-lg">
+        <span>Terms of Service</span>
         <span>Privacy Policy</span>
         <span>End User License Agreement</span>
       </div>
+      <div id="footer-bottom-right-sm">
+        <span>ToS</span>
+        <span>Privacy Policy</span>
+        <span>EULA</span>
+      </div>
     </div>
-
   </footer>
-  <!-- ========== End Footer ========== -->
+  <link rel="stylesheet" href="style.css">
+  <!-- ========== Start Swiper Scipts ========== -->
+  <script src="js/lazysizes.min.js"></script>
+
+  <!-- ========== Start Header Menu Control ========== -->
+  <script>
+    //Header Menu Control
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuIcon = document.querySelector('.menu-icon');
+      const menu = document.querySelector('.menu');
+
+      // Toggle menu when menu icon is clicked
+      menuIcon.addEventListener('click', function (event) {
+        event.stopPropagation(); // Prevent the click event from bubbling up to the document
+        menu.classList.toggle('active');
+      });
+
+      // Close menu when clicking outside of it
+      document.addEventListener('click', function (event) {
+        if (!menu.contains(event.target) && !event.target.classList.contains('menu-icon')) {
+          // Check if the click target is outside of the menu and not the menu icon
+          menu.classList.remove('active');
+        }
+      });
+
+      // Close menu when clicking on a link inside the menu
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.remove('active');
+        });
+      });
+    });
+  </script>
+  <!-- ========== End Header Menu Control ========== -->
+
+  <!-- ========== Start Swiper Carousels ========== -->
+
+
+
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <script src="js/swiper.min.js"></script>
+  <script>
+    var profileSwiper = new Swiper('.profiles-swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      centeredSlides: true, // Center the active slide
+
+      pagination: {
+        el: ".profiles-swiper-pagination",
+        dynamicBullets: true,
+      },
+
+      // Enable swipe gestures
+      touch: {
+        enabled: true,
+      },
+    });
+
+    var eventsSwiper = new Swiper('.events-swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      centeredSlides: true, // Center the active slide
+
+      pagination: {
+        el: ".events-swiper-pagination",
+        dynamicBullets: true,
+      },
+
+      // Enable swipe gestures
+      touch: {
+        enabled: true,
+      },
+    });
+
+    //Talks
+    var talksSwiper = new Swiper('.talks-swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      centeredSlides: true, // Center the active slide
+
+      // Enable swipe gestures
+      touch: {
+        enabled: true,
+      },
+    });
+  </script>
+  <!-- ========== End Swiper Scipts ========== -->
+  <!-- ========== End Swiper Carousels ========== -->
+
 
 </body>
 
