@@ -441,10 +441,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    & h2 {
-      outline: 1px solid;
-    }
   }
 
 
