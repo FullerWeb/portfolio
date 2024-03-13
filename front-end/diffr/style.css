@@ -896,6 +896,7 @@ footer {
       outline: none;
       border: none;
       width: max-content;
+      background: transparent;
     }
   }
 
