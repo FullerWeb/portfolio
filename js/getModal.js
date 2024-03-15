@@ -1,6 +1,5 @@
 // Function to handle opening and closing the modal
 function getModal() {
-  console.log('Attempting to get modal');
 
   // Get the modal
   var modal = document.getElementById('contactModal');
@@ -31,38 +30,7 @@ function getModal() {
   // Form submission handling
   document.getElementById("contactForm").onsubmit = function (event) {
     event.preventDefault(); // Prevent form submission
-    var formData = new FormData(this);
-    var jsonData = {};
-    console.log(jsonData)
-
-    formData.forEach(function (value, key) {
-      jsonData[key] = value;
-    });
-
-    fetch('https://script.google.com/macros/s/AKfycbxdz5iBwPvoiy-vf11U53HxvPbnmK6kz_RWgSO7v7k2cpi0wMGvfStZu3LqddHfECX5tA/exec', {
-      method: 'POST',
-      body: JSON.stringify(jsonData),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then(response => {
-        if (response.ok) {
-          console.log('Form submitted successfully');
-          // Handle success as needed
-        } else {
-          console.error('Form submission failed');
-          // Handle error as needed
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        // Handle error as needed
-      })
-
-
-
-
+  
     modal.style.display = "none";
   };
 }
