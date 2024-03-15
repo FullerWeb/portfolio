@@ -1,187 +1,323 @@
-    :root {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  vertical-align: baseline;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-      --white: whitesmoke;
-      --warning: #ffc107;
-      --background: #0f0f19;
-      --hover: rgb(111, 111, 111);
-    }
+/* Add your own CSS reset styles here */
 
-    * {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      box-sizing: border-box;
-    }
+img {
+  max-width: 100%;
+  display: block;
+}
 
-    /***** Utility Classes *****/
+* {
+  box-sizing: border-box;
+}
 
-    .text-warning {
-      color: var(--warning);
-    }
+:root {
 
-    .body-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      padding-top: 4rem;
-      padding-bottom: 11.5rem;
-    }
+  --white: whitesmoke;
+  --warning: #ffc107;
+  --hover: rgb(111, 111, 111);
+  --background-color: #0f0f19;
+  --color: #ffffff;
+}
 
-    .flex-container {
-      display: flex;
-    }
+h1 {
+  font-size: 2.25rem;
+  padding-bottom: .5rem;
+}
 
-    .main {
-      padding-top: 5rem;
-    }
+h2 {
+  font-size: 1.75rem;
+}
 
-    /***** End Utility Classes *****/
 
-    html,
-    body {
-      color: var(--white);
-      height: 100%;
-    }
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--color);
+}
 
-    header,
-    footer {
-      background-color: black;
-      width: 100%;
-    }
+/***** Header *****/
 
-    body {
-      background-color: var(--background);
-      max-width: 960;
-      margin: 0 auto;
-    }
 
-    nav a {
-      color: var(--white);
-      text-decoration: none;
-      border: 2px solid var(--white);
-      padding: .25rem;
-      border-radius: .25rem;
-    }
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 60rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1;
+  background-color: var(--background-color);
 
-    nav a:hover {
-      color: var(--hover);
-    }
+  .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    a:active {
-      color: var(--warning);
-      border: var(--warning);
-    }
-
-    img {
-      display: block;
-    }
-
-    .modal-wrapper {
-      /* Center the modal horizontally and vertically */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 999;
-      padding-top: 4rem;
-      width: 100%;
+    #brand-logo {
       height: auto;
+      width: 3.3rem;
+      aspect-ratio: 1/1;
+      padding: .5rem;
     }
 
-    .modal {
-      display: none;
-      z-index: 1000;
-      overflow: auto;
-      /* Center the modal vertically and horizontally */
-      justify-content: center;
-      align-items: center;
-
-      /* Set fixed width */
-      width: 50ch;
-      /* Set max-width to prevent the modal from exceeding the screen size */
-      max-width: 90%;
-      padding: 1rem;
-
-      /* Make the modal background semi-transparent */
-      background-color: rgba(0, 0, 0, 0.9);
-      border: 1px solid var(--warning);
-      border-radius: .25rem;
-
-      .modal-content {
-        background-color: transparent;
-        color: #fefefe;
-
-        padding: 1.25rem;
-        width: 75ch;
-
-        & h2 {
-          color: var(--warning);
-        }
-      }
-
-      .close {
-        color: #aaa;
-        float: right;
-        font-size: 1.75rem;
-        font-weight: bold;
-      }
-
-      .close:hover,
-      .close:focus {
-        color: whitesmoke;
-        text-decoration: none;
-        cursor: pointer;
-      }
-
-      & form {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-
-        .form-field {
-          display: flex;
-          flex-direction: column;
-
-          input {
-            border-radius: .25rem;
-          }
-        }
-
-        & input[type="text"] {
-          border-radius: .25rem;
-        }
-
-        & textarea {
-          width: 100%;
-          resize: none;
-          border-radius: .25rem;
-
-        }
-
-        & input[type="submit"] {
-          padding-block: .5rem;
-          width: auto;
-          border: 1px solid var(--warning);
-          border-radius: .25rem;
-          background: none;
-          color: whitesmoke;
-          font-weight: 700;
-        }
-      }
+    #brand-name {
+      font-size: 1rem;
+      line-height: 1rem;
+      padding-block: .5rem;
+      color: var(--warning);
     }
+  }
+}
 
-    /* Media query for smaller devices */
-    @media screen and (max-width: 768px) {
-      .modal {
-        /* For smaller devices, make the modal full screen */
-        width: 100%;
-        height: 100%;
-      }
 
-      .modal-content {
-        /* For smaller devices, remove width limit */
-        width: auto;
-      }
-    }
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--warning);
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: whitesmoke;
+  transition: transform 0.5s ease;
+}
+
+.menu-icon::before {
+  top: -8px;
+}
+
+.menu-icon::after {
+  top: 8px;
+}
+
+nav a {
+  margin-right: 1.25rem;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.nav-sm {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  /* Make off-canvas menu full height */
+  background-color: var(--background-color);
+  /* Adjust as needed */
+  transition: left 1s ease-in-out;
+  /* Add transition for smooth animation */
+}
+
+.menu-open .nav-sm {
+  left: 0;
+  /* Move off-canvas menu to the left */
+}
+
+/***** Media Queries *****/
+
+
+
+/***** End Header *****/
+
+/***** Body *****/
+
+.body-content {
+  padding: 2rem;
+  padding-top: 6rem;
+  padding-bottom: 11.5rem;
+  max-width: 60rem;
+
+  #hero-img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    aspect-ratio: 1.11/1;
+  }
+}
+
+
+/***** End Body *****/
+
+/***** Footer *****/
+
+footer {
+  position: fixed;
+  padding-block: 2rem;
+  bottom: 0;
+  width: 100%;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+
+  #connects {
+    display: flex;
+    gap: 1rem;
+  }
+
+  #plugs {
+    padding-top: 1rem;
+  }
+
+  .plug {
+    text-align: center;
+  }
+}
+
+.plug {
+  max-width: 60ch;
+  height: 5rem;
+  display: none;
+  font-style: italic;
+  text-wrap: balance;
+}
+
+.visible {
+  display: block;
+  animation: testimonialAnimation 10s infinite;
+}
+
+@keyframes testimonialAnimation {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  10%,
+  90% {
+    opacity: 1;
+  }
+}
+
+/***** End Footer *****/
+
+/* Media query for small screens */
+
+@media (max-width: 768px) {
+
+
+  .nav a {
+    margin: 10px 0;
+  }
+
+  .menu-btn {
+    display: block;
+    padding-right: 2rem;
+  }
+
+
+
+  .menu-open .menu-icon {
+    transform: rotate(45deg);
+  }
+
+  .menu-open .menu-icon::before {
+    transform: rotate(90deg) translate(5px, -1px);
+  }
+
+  .menu-open .menu-icon::after {
+    transform: rotate(-90deg) translate(5px, 1px);
+  }
+
+  /* Hide large screen menu */
+  .nav-large {
+    display: none;
+  }
+}
+
+/***** End Media Queries *****/
