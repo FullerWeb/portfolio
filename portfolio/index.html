@@ -164,20 +164,41 @@
 </head>
 
 <body>
-  <header id="header" style="
-    position: fixed;
-    top: 0; 
-    width: 100%; 
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    padding: .75px 1rem;
-    background-color: black;
-    ">
+  <header class="header">
+    <div class="brand">
+      <a href="/" style="display: flex;text-decoration: none;">
+        <img id="brand-logo" src="/assets/fddLogo-1X.webp" srcset="assets/fddLogo-2x.webp 2x" width="48" height="48"
+          alt="brand">
+        <div>
+          <h1 id="brand-name" class="text-warning">Fuller Design & <br>Development</h1>
+        </div>
+      </a>
+    </div>
+    <nav class="nav-sm">
+      <div class="brand">
+        <a href="/" style="display: flex;text-decoration: none;">
+          <img id="brand-logo" src="/assets/fddLogo-1x.webp" srcset="assets/fddLogo-2x.webp 2x" width="48" height="48"
+            alt="brand">
+          <div>
+            <h1 id="brand-name" class="text-warning">Fuller Design & <br>Development</h1>
+          </div>
+        </a>
+      </div>
+      <a href="/about/">About</a>
+      <a href="/services/">Services</a>
+      <a href="/portfolio/">Portfolio</a>
+    </nav>
+    <nav class="nav-large">
+      <a href="/about/">About</a>
+      <a href="/services/">Services</a>
+      <a href="/portfolio/">Portfolio</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu">
+      <span class="menu-icon"></span>
+    </button>
   </header>
   <div class="body-content">
     <h1 class="text-warning">Portfolio</h1>
-    <h2>Web Development</h2>
     <div class="cards">
       <div class="card">
         <div class="card-header">
@@ -206,7 +227,7 @@
             </div>
           </div>
         </div>
-        <img src="/assets/fddLogo-24X24.webp" class="logo" alt="" />
+        <img src="/assets/fddLogo-1X.webp" class="logo" alt="" />
       </div>
       <div class="card">
         <div class="card-header">
@@ -235,7 +256,7 @@
             </div>
           </div>
         </div>
-        <img src="/assets/fddLogo-24X24.webp" class="logo" alt="" />
+        <img src="/assets/fddLogo-1X.webp" class="logo" alt="" />
       </div>
       <div class="card">
         <div class="card-header">
@@ -262,7 +283,7 @@
             </div>
           </div>
         </div>
-        <img src="/assets/fddLogo-24X24.webp" class="logo" alt="" />
+        <img src="/assets/fddLogo-1X.webp" class="logo" alt="" />
       </div>
       <div class="card">
         <div class="card-header">
@@ -291,7 +312,7 @@
               </div>
             </div>
           </div>
-          <img src="/assets/fddLogo-24X24.webp" class="logo" alt="" />
+          <img src="/assets/fddLogo-1X.webp" class="logo" alt="" />
         </div>
       </div>
       <div class="card">
@@ -321,13 +342,42 @@
             </div>
           </div>
         </div>
-        <img src="/assets/fddLogo-24X24.webp" class="logo" alt="" />
+        <img src="/assets/fddLogo-1X.webp" class="logo" alt="" />
       </div>
     </div>
-    <footer id="footer" style="display: flex; flex-direction: column; height: 10rem; position: fixed; bottom: 0;">
-    </footer>
-    <script src="/Components/header/header.js"></script>
-    <script src="/Components/footer/footer.js"></script>
+  <footer>
+    <div id="connects">
+      <button style="background: none; border: transparent; cursor: pointer;"><img src="assets/fddLogo-1X.webp"
+          srcset="../assets/fddLogo-1X.webp 2x" width="36" height="36" alt=""></button>
+      <a href="https://www.upwork.com/fl/~015afcf541f09c773c?mp_source=share" target="_blank"><img
+          id="connect-circle-brand" width="36" height="36" src="../assets/upwork-1X.webp" srcset="../assets/upwork-2X.webp 2x" alt="Link to upwork profile"></a>
+      <div style="background: white; border-radius: 50%; margin-left: .5rem;"><a href="https://github.com/FullerWeb"
+          target="_blank"><img srcset="assets/github-2X.webp 2x" src="../assets/github-1X.webp" alt="Fuller D&D Github"
+            width="36" height="36"></a></div>
+    </div>
+    <div id="plugs">
+      <div class="plug" id="plug1">"Mark consistently went above and beyond in his work, demonstrating
+        a strong
+        work ethic and delivered exceptional results."</div>
+      <div class="plug" id="plug2">"Marks's dedication is unparalleled; he tackles
+        challenges
+        head-on and consistently produces high-quality work, earning our team's respect and admiration."
+      </div>
+      <div class="plug" id="plug3">"Mark's commitment to excellence is evident in everything he
+        does. His
+        attention to detail and tireless work ethic made him an invaluable asset to our team."</div>
+      <div class="plug" id="plug4">"Mark is a talented writer. He was able to produce a quality piece of writing
+        with a quick turnaround. He also responded to our messages quickly."<br>- Soft Batch Standard</div>
+      <div class="plug" id="plug5">"Mark is a fast and diligent worker. Very good freelancer and greatly recommended!"
+      </div>
+      <div class="plug" id="plug6">
+        "Mark's performance far exceeded our expectations, and his exemplary work exudes professionalism."<br>
+        - Dean Seneca, CEO of Seneca Scientific Solutions+, LLC
+      </div>
+    </div>
+  </footer>
+  <script src="../js/header.js"></script>
+  <script src="../js/plugs.js"></script>
 </body>
 
 </html>
