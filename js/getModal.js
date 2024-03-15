@@ -39,7 +39,7 @@ function getModal() {
       jsonData[key] = value;
     });
 
-    fetch('https://script.google.com/macros/s/AKfycbwMkQcoBiT2_HgyasKoKX9vNh3KtAROf0aBHslZhxGHz3snf8YaXOMqcFEPfWBEJd-2cA/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbxdz5iBwPvoiy-vf11U53HxvPbnmK6kz_RWgSO7v7k2cpi0wMGvfStZu3LqddHfECX5tA/exec', {
       method: 'POST',
       body: JSON.stringify(jsonData),
       headers: {
