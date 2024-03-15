@@ -75,3 +75,113 @@
     img {
       display: block;
     }
+
+    .modal-wrapper {
+      /* Center the modal horizontally and vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      padding-top: 4rem;
+      width: 100%;
+      height: auto;
+    }
+
+    .modal {
+      display: none;
+      z-index: 1000;
+      overflow: auto;
+      /* Center the modal vertically and horizontally */
+      justify-content: center;
+      align-items: center;
+
+      /* Set fixed width */
+      width: 50ch;
+      /* Set max-width to prevent the modal from exceeding the screen size */
+      max-width: 90%;
+      padding: 1rem;
+
+      /* Make the modal background semi-transparent */
+      background-color: rgba(0, 0, 0, 0.9);
+      border: 1px solid var(--warning);
+      border-radius: .25rem;
+
+      .modal-content {
+        background-color: transparent;
+        color: #fefefe;
+
+        padding: 1.25rem;
+        width: 75ch;
+
+        & h2 {
+          color: var(--warning);
+        }
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 1.75rem;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: whitesmoke;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      & form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .form-field {
+          display: flex;
+          flex-direction: column;
+
+          input {
+            border-radius: .25rem;
+          }
+        }
+
+        & input[type="text"] {
+          border-radius: .25rem;
+        }
+
+        & textarea {
+          width: 100%;
+          resize: none;
+          border-radius: .25rem;
+
+        }
+
+        & input[type="submit"] {
+          padding-block: .5rem;
+          width: auto;
+          border: 1px solid var(--warning);
+          border-radius: .25rem;
+          background: none;
+          color: whitesmoke;
+          font-weight: 700;
+        }
+      }
+    }
+
+    /* Media query for smaller devices */
+    @media screen and (max-width: 768px) {
+      .modal {
+        /* For smaller devices, make the modal full screen */
+        width: 100%;
+        height: 100%;
+      }
+
+      .modal-content {
+        /* For smaller devices, remove width limit */
+        width: auto;
+      }
+    }
