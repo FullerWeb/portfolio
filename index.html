@@ -1,145 +1,19 @@
-<!doctype html>
-<html lang="en">
+    <link rel="stylesheet" href="../Components/header/header.css">
+    <div id="brand">
+      <a href="/" style="display: flex;text-decoration: none;">
+        <img id="brand-logo" srcset="assets/fddLogo-2x.webp" src="assets/fddLogo-1x.webp" width="48" height="48" alt="brand">
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-  <meta name="description"
-    content="Fuller Design and Development offers comprehensive Web Design and Development services alongside expert Content Writing solutions. Elevate your online presence with tailored designs and compelling content.">
-  <link rel="stylesheet" href="/css/style.min.css">
-
-  <style>
-    #hero-img {
-      width: 100%;
-      max-width: 480px;
-      height: auto;
-      aspect-ratio: 1.11/1;
-    }
-  </style>
-
-  <title>Fuller D&D | Home</title>
-</head>
-
-<body>
-  <header id="header" style="
-    position: fixed;
-    top: 0; 
-    width: 100%; 
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    padding: .75px 1rem;
-    ">
-  </header>
-  <div class="modal-wrapper">
-    <div id="contactModal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Connect with Mark</h2>
-  <form id="contactForm">
-    <div class="form-field">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="Client Name" required>
+        <div>
+          <h1 id="brand-name" class="text-warning">Fuller Design & <br>Development</h1>
+        </div>
+      </a>
     </div>
-    <div class="form-field">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="Email" required>
-    </div>
-    <div class="form-field">
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" name="Subject" required>
-    </div>
-    <div class="form-field">
-      <label for="message">Message</label>
-      <textarea name="Notes" rows="5" required></textarea>
-    </div>
-    <input id="submit-button" type="submit" value="Submit">
-  </form>
-      </div>
-    </div>
-      <script>
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-          e.preventDefault(); // Prevent the default form submission
-          document.getElementById("submit-button").disabled = true;
+    <nav class="nav">
+      <a href="/about/">About</a>
+      <a href="/services/">Services</a>
+      <a href="/portfolio/">Portfolio</a>
+    </nav>
 
-          // Collect the form data
-          var formData = new FormData(this);
-          var keyValuePairs = [];
-          for (var pair of formData.entries()) {
-            keyValuePairs.push(pair[0] + "=" + pair[1]);
-          }
-
-          var formDataString = keyValuePairs.join("&");
-
-          // Send a POST request to your Google Apps Script
-          fetch(
-            "https://script.google.com/macros/s/AKfycbxhTvHi2qhQ6UiPggbQnF_qwl66xZN9FBXzHniysURLNdEMta1Q5NK8EltgvGeODO-z/exec",
-            {
-              redirect: "follow",
-              method: "POST",
-              body: formDataString,
-              headers: {
-                "Content-Type": "text/plain;charset=utf-8",
-              },
-            }
-          )
-            .then(function (response) {
-              // Check if the request was successful
-              if (response) {
-                return response; // Assuming your script returns JSON response
-              } else {
-                throw new Error("Failed to submit the form.");
-              }
-            })
-            .then(function (data) {
-              // Display a success message
-              document.getElementById("submit-button").disabled = false;
-              document.getElementById("contactForm").reset();
-
-            })
-            .catch(function (error) {
-              // Handle errors, you can display an error message here
-              console.error(error);
-              document.getElementById("message").textContent =
-                "An error occurred while submitting the form.";
-              document.getElementById("message").style.display = "block";
-            });
-        });
-      </script>
-  </div>
-  <div class="body-content"
-    style="overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100%;">
-    <img id="hero-img" src="/assets/hero-profile-cropped.webp" width="480" height="433" alt="Image of Mark Fuller">
-  </div>
-  <footer id="footer" style="display: flex; flex-direction: column; height: 10rem; position: fixed; bottom: 0;">
-  </footer>
-  <script src="/Components/header/header.js"></script>
-  <script src="/Components/footer/footer.js"></script>
-  <script src="js/getModal.js"></script>
- <!--  <script src="js/formSubmit.js"></script> -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      });
-
-      // After DOMContentLoaded, attach the event listener for the connect button
-      document.addEventListener('click', function (event) {
-        if (event.target.id === 'connect-button') {
-          getModal();
-        }
-      });
-
-      // Close modal when user clicks on close button (×)
-      document.addEventListener('click', function (event) {
-        if (event.target.className === 'close') {
-          document.getElementById('contactModal').style.display = 'none';
-        }
-      });
-
-  </script>
-
-</body>
-
-</html>
+    <button class="menu-btn" aria-label="Menu">
+      <span class="menu-icon"></span>
+    </button>
