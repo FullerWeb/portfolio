@@ -2,80 +2,144 @@
 <html lang="en">
 
 <head>
-  <title>Fuller D&D</title>
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
   <meta name="description"
     content="Fuller Design and Development offers comprehensive Web Design and Development services alongside expert Content Writing solutions. Elevate your online presence with tailored designs and compelling content.">
-    <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+    #hero-img {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      aspect-ratio: 1.11/1;
+    }
+  </style>
+
+  <title>Fuller D&D | Home</title>
 </head>
 
 <body>
-  <header>
-    <!-- place navbar here -->
+  <header id="header" style="
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: .75px 1rem;
+    ">
   </header>
-  <main>
-    <nav>
-      <button class="nav-btn">About</button>
-      <button class="nav-btn">Services</button>
-      <button class="nav-btn">Portfolio</button>
-    </nav>
-    <section id="title">
-      <div>
-        <img id="brand-logo" src="/assets/fddLogo.webp" alt="">
-      </div>
-      <div>
-        <h1 id="title-name" class="text-warning">Fuller Design & <br>Development</h1>
-      </div>
-    </section>
-    <section id="hero">
-      <img id="hero-img" src="/assets/hero-profile-cropped.webp" alt="">
-    </section>
-    <section id="connect">
-      <div><img id="connect-circle-brand" width="32" height="32" src="/assets/linkedin-logo-48X48.webp" alt=""></div>
-      <button id="connect-btn">Connect</button>
-      <div><img id="connect-circle-brand" width="32" height="32" src="/assets/upwork-circle-48X48.webp" alt=""></div>
-    </section>
-    <section id="plugs">
-      <div class="plug" id="plug1">"Mark consistently went above and beyond in his work, demonstrating
-        a strong
-        work ethic and delivered exceptional results."</div>
-      <div class="plug" id="plug2">"Marks's dedication is unparalleled; he tackles
-        challenges
-        head-on and consistently produces high-quality work, earning our team's respect and admiration."
-      </div>
-      <div class="plug" id="plug3">"Mark's commitment to excellence is evident in everything he
-        does. His
-        attention to detail and tireless work ethic made him an invaluable asset to our team."</div>
-      <div class="plug" id="plug4">"Mark is a talented writer. He was able to produce a quality piece of writing
-        with a quick turnaround. He also responded to our messages quickly.</div>
-      <div class="plug" id="plug5">"Mark is a fast and diligent worker. Very good freelancer and greatly recommended!"
-      </div>
-    </section>
+  <div class="modal-wrapper">
+    <div id="contactModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Connect with Mark</h2>
+  <form id="contactForm">
+    <div class="form-field">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="Client Name" required>
     </div>
-  </main>
-  <footer>
-    <!-- place footer here -->
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="Email" required>
+    </div>
+    <div class="form-field">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="Subject" required>
+    </div>
+    <div class="form-field">
+      <label for="message">Message</label>
+      <textarea name="Notes" rows="5" required></textarea>
+    </div>
+    <input id="submit-button" type="submit" value="Submit">
+  </form>
+      </div>
+    </div>
+      <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent the default form submission
+          document.getElementById("submit-button").disabled = true;
+
+          // Collect the form data
+          var formData = new FormData(this);
+          var keyValuePairs = [];
+          for (var pair of formData.entries()) {
+            keyValuePairs.push(pair[0] + "=" + pair[1]);
+          }
+
+          var formDataString = keyValuePairs.join("&");
+
+          // Send a POST request to your Google Apps Script
+          fetch(
+            "https://script.google.com/macros/s/AKfycbxhTvHi2qhQ6UiPggbQnF_qwl66xZN9FBXzHniysURLNdEMta1Q5NK8EltgvGeODO-z/exec",
+            {
+              redirect: "follow",
+              method: "POST",
+              body: formDataString,
+              headers: {
+                "Content-Type": "text/plain;charset=utf-8",
+              },
+            }
+          )
+            .then(function (response) {
+              // Check if the request was successful
+              if (response) {
+                return response; // Assuming your script returns JSON response
+              } else {
+                throw new Error("Failed to submit the form.");
+              }
+            })
+            .then(function (data) {
+              // Display a success message
+              document.getElementById("submit-button").disabled = false;
+              document.getElementById("contactForm").reset();
+
+            })
+            .catch(function (error) {
+              // Handle errors, you can display an error message here
+              console.error(error);
+              document.getElementById("message").textContent =
+                "An error occurred while submitting the form.";
+              document.getElementById("message").style.display = "block";
+            });
+        });
+      </script>
+  </div>
+  <div class="body-content"
+    style="overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100%;">
+    <img id="hero-img" src="/assets/hero-profile-cropped.webp" width="480" height="433" alt="Image of Mark Fuller">
+  </div>
+  <footer id="footer" style="display: flex; flex-direction: column; height: 10rem; position: fixed; bottom: 0;">
   </footer>
-
+  <script src="/Components/header/header.js"></script>
+  <script src="/Components/footer/footer.js"></script>
+  <script src="js/getModal.js"></script>
+ <!--  <script src="js/formSubmit.js"></script> -->
   <script>
-    const testimonials = document.querySelectorAll('.plug');
-    let currentTestimonialIndex = 0;
-
-    function showNextTestimonial() {
-      testimonials.forEach(testimonial => {
-        testimonial.classList.remove('visible');
+    document.addEventListener('DOMContentLoaded', function () {
       });
-      testimonials[currentTestimonialIndex].classList.add('visible');
-      currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
-    }
 
-    showNextTestimonial(); // Show the first testimonial immediately
+      // After DOMContentLoaded, attach the event listener for the connect button
+      document.addEventListener('click', function (event) {
+        if (event.target.id === 'connect-button') {
+          getModal();
+        }
+      });
 
-    setInterval(showNextTestimonial, 10000); // Change testimonial every 6 seconds
+      // Close modal when user clicks on close button (×)
+      document.addEventListener('click', function (event) {
+        if (event.target.className === 'close') {
+          document.getElementById('contactModal').style.display = 'none';
+        }
+      });
+
   </script>
+
 </body>
 
 </html>
