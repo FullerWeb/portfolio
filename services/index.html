@@ -4,228 +4,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-    <meta name="description"
-      content="Fuller Design and Development offers comprehensive Web Design and Development services alongside expert Content Writing solutions. Elevate your online presence with tailored designs and compelling content.">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <meta name="description"
+    content="Fuller Design and Development offers comprehensive Web Design and Development services alongside expert Content Writing solutions. Elevate your online presence with tailored designs and compelling content.">
   <link rel="stylesheet" href="/css/style.css">
+  <title>Fuller D&D | Services</title>
   <style>
-    * {
-      /* outline: 1px solid; */
-      --warning: #ffc107;
+    h2 {
+      font-size: 1.75rem;
     }
 
-    .cards {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 3rem;
-    }
 
-    .card {
-      position: relative;
-      border: 1px solid rgb(84, 84, 84);
-      border-radius: .25rem;
-      width: 280px;
-      height: 240px;
-      padding: 1rem;
-      color: whitesmoke;
-      background-color: transparent;
-    }
 
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      padding: .5rem;
-      border-bottom: 1px solid rgb(84, 84, 84);
-    }
-
-    .card-title {
-      color: var(--warning)
-    }
-
-    .card-view-link {
-      border: 1px solid var(--warning);
-      color: whitesmoke;
-      text-decoration: none;
-      padding-inline: .25rem;
-      padding-block: .15rem;
-      border-radius: .25rem;
-    }
-
-    .card-view-link:hover,
-    .card:focus {
-      box-shadow: 0px 0px 19px -3px var(--warning);
-    }
-
-    .card-body {
-      display: flex;
-      gap: 1rem;
-      padding: .75rem;
-    }
-
-    .card-sidebar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .card-content {
+    .body-content {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-
-      padding-inline: .25rem;
-
-    }
-
-    .logo {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 1.75rem;
-      padding: .25rem;
-    }
-
-
-    .card-project-brand-logo {
-      align-self: start;
-      height: 4rem;
-      width: 4rem;
-    }
-
-    .card-h1 {
-      border-bottom: 1px solid rgb(82, 82, 82);
-      font-size: 1rem;
-      margin-bottom: 0;
-
-    }
-
-    .card-h3 {
-      font-size: .75rem;
-      margin-bottom: 0;
-    }
-
-    .card-text {
-      font-size: .75rem;
-    }
-
-    .project-desc {
-      padding-block: 1rem;
-      text-wrap: balance;
-      font-size: .75rem;
-    }
-
-    .stack {
-      padding-top: 1.25rem;
-      display: flex;
-      gap: .125rem;
-      height: 2rem;
-    }
-
-    .stack-logo {
-      height: 2rem;
-    }
-
-    /*Brand styling*/
-    #holy-feast-brand {
-      align-self: start;
-      width: 4rem;
-      height: auto;
-      aspect-ratio: 3/4;
-    }
-
-    #copycart-brand {
-      align-self: start;
-      padding-top: 1rem;
-      height: 2rem;
-      width: auto;
-      border-radius: .25rem;
-
+      gap: 1rem;
     }
   </style>
-  <title>Fuller D&D | Portfolio</title>
 </head>
 
 <body>
-  <header id="header" style="
-    position: fixed;
-    top: 0; 
-    width: 100%; 
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    padding: .75px 1rem;
-    background-color: black;
-    ">
-  </header>
-  <div class="body-content">
-    <h1 class="text-warning">Portfolio</h1>
-    <h2>Web Development</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">Customer Survey</span>
-          <div class="">
-            <a class="card-view-link" href="/front-end/holy-feast/" target="_blank">View</a>
-          </div>
+  <header class="header">
+    <div class="brand">
+      <a href="/" style="display: flex;text-decoration: none;">
+        <img id="brand-logo" src="../assets/fddLogo-1X.webp" srcset="../assets/fddLogo-2x.webp 2x" width="48" height="48"
+          alt="brand">
+        <div>
+          <h1 id="brand-name" class="text-warning">Fuller Design & <br>Development</h1>
         </div>
-        <div class="card-body">
-          <div class="card-sidebar">
-            <img id="holy-feast-brand" src="/assets/client-brands/holy-feast.webp" alt="Holy Feast Logo">
-          </div>
-          <div class="card-content">
-            <h1 class="card-h1">Holy Feast</h1>
-            <spam class="project-desc">Created multipart form to capture customers' current dining experience.</span>
-              <div class="stack">
-                <div>
-                  <img src="/assets/stack-icons/html-css-js.webp" class="stack-logo" alt="">
-                </div>
-                <div>
-                  <img src="/assets/stack-icons/sheets-logo.webp" class="stack-logo" alt="">
-                </div>
-                <div>
-                  <img src="/assets/stack-icons/GAnalytics-48X48.webp" width=32 height="32" alt="" class="stack-logo">
-                </div>
-              </div>
-          </div>
-        </div>
-        <img src="/assets/fddLogo-24X24.webp" class="logo" alt="" />
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <span class="card-title">Figma Conversion</span>
-          <div class="">
-            <a class="card-view-link" href="/front-end/copyCart/" target="_blank">View</a>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-sidebar">
-            <img id="copycart-brand" src="/assets/client-brands/copycart.webp" alt="Holy Feast Logo" width="122"
-              height="20">
-          </div>
-          <div class="card-content">
-            <h1 class="card-h1">COPYCART</h1>
-            <span class="project-desc">Converted Figma Design to mobile UI.</span>
-            <div class="stack">
-              <div>
-                <img src="/assets/stack-icons/html-css-js.webp" class="stack-logo" alt="">
-              </div>
-              <div>
-                <img src="/assets/stack-icons/figma-logo-512.webp" class="stack-logo" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-        <img src="/assets/fddLogo-24X24.webp" class="logo" alt="" />
-      </div>
-
+      </a>
     </div>
+    <nav class="nav-sm">
+      <div class="brand">
+        <a href="/" style="display: flex;text-decoration: none;">
+          <img id="brand-logo" src="../assets/fddLogo-1x.webp" srcset="../assets/fddLogo-2x.webp 2x" width="48" height="48"
+            alt="brand">
+          <div>
+            <h1 id="brand-name" class="text-warning">Fuller Design & <br>Development</h1>
+          </div>
+        </a>
+      </div>
+      <a href="/about/">About</a>
+      <a href="/services/">Services</a>
+      <a href="/portfolio/">Portfolio</a>
+    </nav>
+    <nav class="nav-large">
+      <a href="/about/">About</a>
+      <a href="/services/">Services</a>
+      <a href="/portfolio/">Portfolio</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu">
+      <span class="menu-icon"></span>
+    </button>
+  </header>
+    <div id="contactModalContainer" class="modal-container">
+      <div id="contactModal" class="modal">
+        <span id="closeModalBtn" class="close-btn">&times;</span>
+        <form id="contactForm">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="Client Name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" required>
+          </div>
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="Subject" required>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea name="Notes" rows="5" required></textarea>
+          </div>
+          <input id="submit-btn" type="submit" value="Submit">
+          <div id="message"></div>
+        </form>
+      </div>
+      <script src="/js/formSubmit.js"></script>
+    </div>
+  <div class="body-content" style="overflow: hidden;">
+    <h2 class="text-warning">Services</h2>
+    <h3>Web Design</h3>
+    <h3>Web Development</h3>
+    <h3>Website Performance</h3>
+    <h3>Copywriting</h3>
+    <h3>Technical Writing</h3>
+    <h3>Grant Proposals</h3>
+    <h3>Usability Testing</h3>
   </div>
-    <footer id="footer" style="display: flex; flex-direction: column; height: 10rem; position: fixed; bottom: 0;"></footer>
-    <script src="/Components/header/header.js"></script>
-    <script src="/Components/footer/footer.js"></script>
+  <footer>
+    <div id="connects">
+      <button id="openContactModalBtn">Connect</button>
+      <a href="https://www.upwork.com/fl/~015afcf541f09c773c?mp_source=share" target="_blank"><img
+          id="connect-circle-brand" width="36" height="36" src="../assets/upwork-1X.webp"
+          alt="Link to upwork profile"></a>
+      <div id="github-logo"><a href="https://github.com/FullerWeb" target="_blank"><img
+            srcset="../assets/github-2X.webp 2x" src="../assets/github-1X.webp" alt="Fuller D&D Github" width="36"
+            height="36"></a></div>
+    </div>
+    <div id="plugs">
+      <div class="plug" id="plug1">"Mark consistently went above and beyond in his work, demonstrating
+        a strong
+        work ethic and delivered exceptional results."</div>
+      <div class="plug" id="plug2">"Marks's dedication is unparalleled; he tackles
+        challenges
+        head-on and consistently produces high-quality work, earning our team's respect and admiration."
+      </div>
+      <div class="plug" id="plug3">"Mark's commitment to excellence is evident in everything he
+        does. His
+        attention to detail and tireless work ethic made him an invaluable asset to our team."</div>
+      <div class="plug" id="plug4">"Mark is a talented writer. He was able to produce a quality piece of writing
+        with a quick turnaround. He also responded to our messages quickly."<br>- Soft Batch Standard</div>
+      <div class="plug" id="plug5">"Mark is a fast and diligent worker. Very good freelancer and greatly recommended!"
+      </div>
+      <div class="plug" id="plug6">
+        "Mark's performance far exceeded our expectations, and his exemplary work exudes professionalism."<br>
+        - Dean Seneca, CEO of Seneca Scientific Solutions+, LLC
+      </div>
+    </div>
+  </footer>
+  <script src="../js/header.js"></script>
+  <script src="../js/plugs.js"></script>
+  <script src="../js/getModal.js"></script>
+
+
 </body>
 
 </html>
