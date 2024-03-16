@@ -42,8 +42,8 @@
   <header class="header">
     <div class="brand">
       <a href="/" style="display: flex;text-decoration: none;">
-        <img id="brand-logo" src="/assets/fddLogo-1X.webp" srcset="assets/fddLogo-2x.webp 2x" width="48" height="48"
-          alt="brand">
+        <img id="brand-logo" src="../assets/fddLogo-1X.webp" srcset="../assets/fddLogo-2x.webp 2x" width="48"
+          height="48" alt="brand">
         <div>
           <h1 id="brand-name" class="text-warning">Fuller Design & <br>Development</h1>
         </div>
@@ -52,7 +52,7 @@
     <nav class="nav-sm">
       <div class="brand">
         <a href="/" style="display: flex;text-decoration: none;">
-          <img id="brand-logo" src="/assets/fddLogo-1x.webp" srcset="assets/fddLogo-2x.webp 2x" width="48" height="48"
+          <img id="brand-logo" src="../assets/fddLogo-1x.webp" srcset="../assets/fddLogo-2x.webp 2x" width="48" height="48"
             alt="brand">
           <div>
             <h1 id="brand-name" class="text-warning">Fuller Design & <br>Development</h1>
@@ -72,11 +72,37 @@
       <span class="menu-icon"></span>
     </button>
   </header>
+  <div id="contactModalContainer" class="modal-container">
+    <div id="contactModal" class="modal">
+      <span id="closeModalBtn" class="close-btn">&times;</span>
+      <form id="contactForm">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Client Name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+        <div class="form-field">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="Subject" required>
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea name="Notes" rows="5" required></textarea>
+        </div>
+        <input id="submit-btn" type="submit" value="Submit">
+        <div id="message"></div>
+      </form>
+    </div>
+    <script src="/js/formSubmit.js"></script>
+  </div>
   <div class="body-content">
     <h1 class="text-warning">About</h1>
     <div class="flex">
-      <img id="younger" src="/assets/younger-1X.webp" srcset="/assets/younger-2X.webp 2x" width="240" height="240" alt="Younger picture of Mark Fuller"
-        style="border-radius: .25rem; flex: 1;">
+      <img id="younger" src="/assets/younger-1X.webp" srcset="/assets/younger-2X.webp 2x" width="240" height="240"
+        alt="Younger picture of Mark Fuller" style="border-radius: .25rem; flex: 1;">
       <div class="flex text-block" style="flex: 1">
         <p>
           Mark Fuller, the driving force behind Fuller Design and Development, is transitioning from a 15-year
@@ -114,19 +140,17 @@
           less is more; every element serves a purpose and contributes to the overall user experience.
         </p>
       </div>
-      <img id="thinker" src="/assets/the-thinker-1X.webp" srcset="/assets/the-thinker-1X.webp 2x" width="250" height="196" alt="The Thinker" style="flex: 1;">
+      <img id="thinker" src="/assets/the-thinker-1X.webp" srcset="/assets/the-thinker-1X.webp 2x" width="250"
+        height="196" alt="The Thinker" style="flex: 1;">
     </div>
   </div>
   <footer>
     <div id="connects">
-      <button style="background: none; border: transparent; cursor: pointer;"><img src="../assets/fddLogo-1X.webp"
-          srcset="assets/fddLogo-1X.webp 2x" width="36" height="36" alt=""></button>
+      <button id="openContactModalBtn">Connect</button>
       <a href="https://www.upwork.com/fl/~015afcf541f09c773c?mp_source=share" target="_blank"><img
-          id="connect-circle-brand" width="36" height="36" src="../assets/upwork-1X.webp" srcset="../assets/upwork-2X.webp 2x"
-          alt="Link to upwork profile"></a>
-      <div style="background: white; border-radius: 50%; margin-left: .5rem;"><a href="https://github.com/FullerWeb"
-          target="_blank"><img srcset="assets/github-2X.webp 2x" src="../assets/github-1X.webp" alt="Fuller D&D Github"
-            width="36" height="36"></a></div>
+          id="connect-circle-brand" width="36" height="36" src="../assets/upwork-1X.webp" alt="Link to upwork profile"></a>
+      <div id="github-logo"><a href="https://github.com/FullerWeb" target="_blank"><img srcset="../assets/github-2X.webp 2x"
+            src="../assets/github-1X.webp" alt="Fuller D&D Github" width="36" height="36"></a></div>
     </div>
     <div id="plugs">
       <div class="plug" id="plug1">"Mark consistently went above and beyond in his work, demonstrating
@@ -151,6 +175,7 @@
   </footer>
   <script src="../js/header.js"></script>
   <script src="../js/plugs.js"></script>
+  <script src="../js/getModal.js"></script>
 </body>
 
 </html>
