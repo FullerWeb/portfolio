@@ -1,32 +1,52 @@
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-  event.preventDefault();
-
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent the default form submission
+  document.getElementById("submit-btn").disabled = true;
+  document.getElementById("message").textContent =
+    "Submitting...";
+  document.getElementById("message").style.display = "block";
+  // Collect the form data
   var formData = new FormData(this);
-  var jsonData = {};
-  console.log(jsonData)
+  var keyValuePairs = [];
+  for (var pair of formData.entries()) {
+    keyValuePairs.push(pair[0] + "=" + pair[1]);
+  }
 
-  formData.forEach(function (value, key) {
-    jsonData[key] = value;
-  });
+  var formDataString = keyValuePairs.join("&");
 
-  fetch('https://script.google.com/macros/s/AKfycbwMkQcoBiT2_HgyasKoKX9vNh3KtAROf0aBHslZhxGHz3snf8YaXOMqcFEPfWBEJd-2cA/exec', {
-    method: 'POST',
-    body: JSON.stringify(jsonData),
-    headers: {
-      'Content-Type': 'application/json'
+  // Send a POST request to your Google Apps Script
+  fetch(
+    "https://script.google.com/macros/s/AKfycbxhTvHi2qhQ6UiPggbQnF_qwl66xZN9FBXzHniysURLNdEMta1Q5NK8EltgvGeODO-z/exec",
+    {
+      redirect: "follow",
+      method: "POST",
+      body: formDataString,
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
+      },
     }
-  })
-    .then(response => {
-      if (response.ok) {
-        console.log('Form submitted successfully');
-        // Handle success as needed
+  )
+    .then(function (response) {
+      // Check if the request was successful
+      if (response) {
+        if (response.status == 200){
+          document.getElementById("message").textContent =
+            "Thanks for reaching out. I will be in touch shortly. - Mark Fuller";
+        }
+        return response; 
       } else {
-        console.error('Form submission failed');
-        // Handle error as needed
+        throw new Error("Failed to submit the form.");
       }
     })
-    .catch(error => {
-      console.error('Error:', error);
-      // Handle error as needed
+    .then(function (data) {
+      document.getElementById("contactForm").reset();
+      
+
+    })
+    .catch(function (error) {
+      // Handle errors, you can display an error message here
+      console.error(error);
+      document.getElementById("message").textContent =
+        "Something happened while attempting to send your message. Please try again.";
+      document.getElementById("message").style.display = "block";
     });
 });
