@@ -323,12 +323,17 @@ footer {
 
   #connects {
     display: flex;
+    align-items: center;
     gap: 1rem;
   }
 
   #github-logo {
     background: white;
     border-radius: 50%;
+  }
+
+  #freelancer-logo {
+    padding-top: .5rem;
   }
 
   #plugs {
