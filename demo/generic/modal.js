@@ -2,23 +2,23 @@
 function openModal(modalId) {
   var modal = document.getElementById(modalId);
   modal.style.display = "block";
-  modal.style.animation = "fadeIn 0.5s";
+  modal.style.animation = "fadeIn 1s";
 }
 
 // Function to close a modal
 function closeModal(modalId) {
   var modal = document.getElementById(modalId);
-  modal.style.animation = "fadeOut 0.5s";
+  modal.style.animation = "fadeOut 1s";
   setTimeout(function () {
     modal.style.display = "none";
     modal.style.animation = ""; // Reset animation
-  }, 500); // Wait for the fade out animation to complete
+  }, 1000); // Wait for the fade out animation to complete
 }
 
 // Get all elements with class "openModalBtn"
 var openModalBtns = document.getElementsByClassName("openModalBtn");
 
-// Loop through each button and attach click event listener
+// Loop through each modal button and attach click event listener
 for (var i = 0; i < openModalBtns.length; i++) {
   openModalBtns[i].addEventListener("click", function () {
     var modalId = this.getAttribute("data-modal-target");
