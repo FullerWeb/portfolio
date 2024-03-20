@@ -263,8 +263,12 @@ header {
     justify-content: space-between;
 
     #hero-heading {
-      max-width: 23ch;
+      max-width: 25ch;
       font-weight: 700;
+
+      & span {
+        font-size: 1.5rem;
+      }
 
       #phrase-1 {
         font-weight: 700;
