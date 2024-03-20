@@ -189,6 +189,11 @@ header {
       aspect-ratio: 2.4/1;
     }
 
+    .off-canvas {
+      position: absolute;
+      left: -9999px;
+    }
+
     #nav-selects {
       display: flex;
 
@@ -362,9 +367,11 @@ header {
 
   #left-work-details {
     flex: 1 1 var(--min-block);
+
     & p {
       font-weight: 400;
     }
+
     & img {
       width: 100%;
       height: auto;
